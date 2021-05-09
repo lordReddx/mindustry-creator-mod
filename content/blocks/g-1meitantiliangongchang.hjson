@@ -1,0 +1,17 @@
+{
+   // name:煤炭提炼工厂
+    //description:描述
+	"health":360 ,
+	size:2
+updateEffect: "steam",
+		craftEffect: "fireballsmoke",
+	buildCostMultiplier: 0.5,
+	requirements:[
+		zuanjing/1
+		molizhi/3
+		titanium/120
+		graphite/80
+	]
+	category:crafting
+	research:e-wenshiqi
+}

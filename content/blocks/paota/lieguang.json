@@ -1,0 +1,46 @@
+{
+  "shootType": {
+    "type": "BasicBulletType",
+    "speed": 6,
+    "lifetime": 40,
+    "damage": 25,
+    "height": 40,
+    "width": 40,
+    "hitEffect": "hitLaser",
+    "despawnEffect": "hitLaser",
+    "pierce": true,
+    "frontColor": "bbdefb",
+    "backColor": "90caf9",
+    "fragBullets": 1,
+    "fragBullet": {
+      "type": "FlakBulletType",
+      "damage": 30,
+      "splashDamageRadius": 24,
+      "splashDamage": 150,
+      "width": 100,
+      "height": 100,
+      "speed": 0,
+      "lifetime": 30,
+      "hitEffect": "plasticExplosion",
+      "backColor": "8aa3f4",
+      "frontColor": "8aa3f4",
+      "reloadMultiplier": 3,
+      "ammoMultiplier": 1,
+      "lightning": 10,
+      "lightningLength": 10,
+      "collidesGround": true,
+      "fragBullets": 8,
+      "fragBullet": {
+        "type": "LaserBulletType",
+        "hitEffect": "hitLancer",
+        "despawnEffect": "none",
+        "length": 288,
+        "width": 24,
+        "hitSize": 8,
+        "lifetime": 24,
+        "drawSize": 400,
+        "damage": 30
+      }
+    }
+  }
+}

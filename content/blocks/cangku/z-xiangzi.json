@@ -1,0 +1,21 @@
+{
+    "name": "[yellow]Treasure Chest",
+    "description": "",
+    //"type": "StorageBlock",
+    "itemCapacity": 10,
+   // "research": "z-xinxi",
+    "buildVisibility": "sandboxOnly",
+    "targetable": false,
+    "update": false, //true
+    "solid": false,
+    "health": 1,
+    "size": 1,
+    "requirements": [
+        {
+            "item": "invalid",
+            "amount": 1
+        }
+    ],
+    "category": "logic"
+    
+}

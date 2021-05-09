@@ -1,0 +1,277 @@
+{
+    "canOverdrive": false,
+    "size": 3,
+    "type": "UnitFactory",
+    "constructTime": 180,
+    "plans": [
+        {
+            "unit": "zhaoya",
+            "requirements": [
+                {
+                    "item": "copper",
+                    "amount": 1
+                }
+            ],
+            "time": 180
+        },
+        {
+            "unit": "Clem",
+            "requirements": [
+                {
+                    "item": "copper",
+                    "amount": 1
+                }
+            ],
+            "time": 180
+        },
+        {
+            "unit": "Rot",
+            "requirements": [
+                {
+                    "item": "copper",
+                    "amount": 1
+                }
+            ],
+            "time": 180
+        },
+        {
+            "unit": "jisu1",
+            "requirements": [
+                {
+                    "item": "copper",
+                    "amount": 1
+                }
+            ],
+            "time": 180
+        },
+        {
+            "unit": "jisu2",
+            "requirements": [
+                {
+                    "item": "copper",
+                    "amount": 1
+                }
+            ],
+            "time": 180
+        },
+        {
+            "unit": "jisu3",
+            "requirements": [
+                {
+                    "item": "copper",
+                    "amount": 1
+                }
+            ],
+            "time": 180
+        },
+        {
+            "unit": "jisu4",
+            "requirements": [
+                {
+                    "item": "copper",
+                    "amount": 1
+                }
+            ],
+            "time": 180
+        },
+        {
+            "unit": "jisu5",
+            "requirements": [
+                {
+                    "item": "copper",
+                    "amount": 1
+                }
+            ],
+            "time": 180
+        },
+        {
+            "unit": "zhongjia1",
+            "requirements": [
+                {
+                    "item": "copper",
+                    "amount": 1
+                }
+            ],
+            "time": 180
+        },
+        {
+            "unit": "zhongjia2",
+            "requirements": [
+                {
+                    "item": "copper",
+                    "amount": 1
+                }
+            ],
+            "time": 180
+        },
+        {
+            "unit": "zhongjia3",
+            "requirements": [
+                {
+                    "item": "copper",
+                    "amount": 1
+                }
+            ],
+            "time": 180
+        },
+        {
+            "unit": "zhongjia4",
+            "requirements": [
+                {
+                    "item": "copper",
+                    "amount": 1
+                }
+            ],
+            "time": 180
+        },
+        {
+            "unit": "zhongjia5",
+            "requirements": [
+                {
+                    "item": "copper",
+                    "amount": 1
+                }
+            ],
+            "time": 180
+        },
+        {
+            "unit": "shibing1",
+            "requirements": [
+                {
+                    "item": "copper",
+                    "amount": 1
+                }
+            ],
+            "time": 180
+        },
+        {
+            "unit": "shibing2",
+            "requirements": [
+                {
+                    "item": "copper",
+                    "amount": 1
+                }
+            ],
+            "time": 180
+        },
+        {
+            "unit": "shibing3",
+            "requirements": [
+                {
+                    "item": "copper",
+                    "amount": 1
+                }
+            ],
+            "time": 180
+        },
+        {
+            "unit": "shibing4",
+            "requirements": [
+                {
+                    "item": "copper",
+                    "amount": 1
+                }
+            ],
+            "time": 180
+        },
+        {
+            "unit": "shibing5",
+            "requirements": [
+                {
+                    "item": "copper",
+                    "amount": 1
+                }
+            ],
+            "time": 180
+        },
+        {
+            "unit": "zhuzai",
+            "requirements": [
+                {
+                    "item": "copper",
+                    "amount": 1
+                }
+            ],
+            "time": 180
+        },
+ 
+         {
+            "unit": "muchao1",
+            "requirements": [
+                {
+                    "item": "copper",
+                    "amount": 1
+                }
+            ],
+            "time": 180
+        },
+        {
+            "unit": "muchao2",
+            "requirements": [
+                {
+                    "item": "copper",
+                    "amount": 1
+                }
+            ],
+            "time": 180
+        },
+        {
+            "unit": "muchao3",
+            "requirements": [
+                {
+                    "item": "copper",
+                    "amount": 1
+                }
+            ],
+            "time": 180
+        },
+        {
+            "unit": "zhongji-s",
+            "requirements": [
+                {
+                    "item": "copper",
+                    "amount": 1
+                }
+            ],
+            "time": 180
+        },
+        {
+            "unit": "rule",
+            "requirements": [
+                {
+                    "item": "copper",
+                    "amount": 1
+                }
+            ],
+            "time": 420
+        }
+    ],
+
+
+
+
+
+
+
+
+
+
+    "itemCapacity": 1,
+    "requirements": [
+            {
+                "item": "invalid",
+                "amount": 1
+            }
+        ],
+        "consumes": {
+            "items": {
+                "items": [
+                    {
+                        "item": "copper",
+                        "amount": 1
+                    }
+                ]
+            }
+        },
+        "category": "units"
+    }

@@ -1,0 +1,23 @@
+"ammoTypes": {
+    "graphite":"artilleryDense"
+    "silicon":"artilleryHoming"
+    "pyratite":"artilleryIncendiary"
+    "blast-compound":"artilleryExplosive"
+    "plastanium":"artilleryPlastic"
+    "guijingti": {
+               "type":"ArtilleryBulletType"
+               
+         "damage": 5
+         "speed":3
+         "width": 17
+         "height": 20
+         "lifetime":60
+         "hitEffect":"plasticExplosionFlak"
+         "reloadMultiplier":1.2
+          "splashDamageRadius":63,
+          "splashDamage":20,
+         "ammoMultiplier": 2
+         
+    }
+    
+    }

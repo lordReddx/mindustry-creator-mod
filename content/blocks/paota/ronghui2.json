@@ -1,0 +1,69 @@
+{"canOverdrive": true,
+    //"name": "天煞",
+   // "description": "伤害高，范围大",
+   // "type": "LaserTurret",
+    "size": 4,
+    "health": 2600,
+    "buildCostMultiplier": 0.4,
+    //"heatColor": "d98686",
+    //"shootEffect": "shootBig",
+    "shootSound": "tiansha",
+    "ammoPerShot": 1,
+    "range": 480,
+    "firingMoveFract": 0.5,
+    "inaccuracy": 0,
+    "continuous": true,
+    "recoilAmount": 7,
+    "rotateSpeed": 4,
+    "shootShake": 5,
+    "shootCone": 40,
+    "coolantUsage": 0.4,
+    "coolEffect": "steam",
+    "cooldown": 1,
+    "consumes": {
+        "liquid": {
+            "liquid": "cryofluid",
+            "amount": 0.05,
+            "booster": false
+        }
+    },
+    "powerUse": 390,
+    "reloadTime": 11,
+    "shootDuration": 5,
+    "requirements": [
+        {
+            "item": "lead",
+            "amount": 3000
+        },
+        {
+            "item": "copper",
+            "amount": 2400
+        },
+        {
+            "item": "surge-alloy",
+            "amount": 1200
+        },
+        {
+            "item": "guijingti",
+            "amount": 1200
+        },
+        {
+            "item": "weijing1",
+            "amount": 60
+        },
+        {
+            "item": "molishi",
+            "amount": 30
+        },
+        {
+            "item": "jin",
+            "amount": 320
+        },
+        {
+            "item": "xi",
+            "amount": 800
+        }
+    ],
+    "category": "turret",
+    "research": "ronghui3"
+}

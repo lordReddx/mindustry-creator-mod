@@ -1,0 +1,13 @@
+//T2
+{
+	"upgrades":[
+		["nova","pulsar"],
+        ["dagger","mace"],
+        ["crawler","atrax"],
+        ["flare","horizon"],
+        ["mono","poly"],
+        ["risso","minke"],
+		["1kuangji","2kuangji"]
+		
+    ]
+}

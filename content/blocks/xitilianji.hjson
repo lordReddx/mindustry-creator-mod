@@ -1,0 +1,17 @@
+{
+    //name:锡提炼机
+    //description:描述
+	"health":220 ,
+	size:2
+	buildCostMultiplier: 0.3,
+	updateEffect: "steam",
+	requirements:[
+		copper/65
+		plastanium/25
+		graphite/70
+		thorium/30
+		guijingti/40
+	]
+	category:crafting
+	research:a-1guijingtichengxingji
+}

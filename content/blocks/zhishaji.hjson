@@ -1,0 +1,18 @@
+{
+    //name:制沙机
+    //description:可以输入资源制造沙子，也可以就地下采集泥土制作沙子。
+	"health":360 ,
+	size:2
+updateEffect: "steam",
+		craftEffect: "fireballsmoke",
+	buildCostMultiplier: 0.5,
+	requirements:[
+		zuanjing/140
+		weijing1/3
+        jin/300
+		titanium/120
+		graphite/250
+	]
+	category:crafting
+	research:pulverizer
+}

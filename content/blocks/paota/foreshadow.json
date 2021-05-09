@@ -1,0 +1,65 @@
+{
+	"ammoTypes": {
+		"surge-alloy": {
+			"type": "PointBulletType",
+			"shootEffect": "instShoot",
+			"hitEffect": "instHit",
+			"smokeEffect": "smokeCloud",
+			"trailEffect": "instTrail",
+			"despawnEffect": "instBomb",
+			"trailSpacing": 20,
+			"damage": "1350",
+			"tileDamageMultiplier": 0.5,
+			"hitShake": 6,
+			"ammoMultiplier": 1,
+			"speed": "100",
+			"buildingDamageMultiplier": 0.3
+		},
+		"zuanjing": {
+			"type": "PointBulletType",
+			"hitEffect": "massiveExplosion",
+			"smokeEffect": "smokeCloud",
+			"trailEffect": "instTrail",
+			"despawnEffect": "greenBomb",
+			"trailSpacing": 20,
+			"tileDamageMultiplier": 0.5,
+			"hitShake": 6,
+			"speed": "100",
+			"ammoMultiplier": 1,
+			"shootEffect": "instShoot",
+			"splashDamageRadius": 115,
+			"splashDamage": 400,
+			"buildingDamageMultiplier": 0.3
+		}
+	},
+	"requirements": [
+		{
+			"item": "lead",
+			"amount": 800
+		},
+		{
+			"item": "copper",
+			"amount": 1200
+		},
+		{
+			"item": "metaglass",
+			"amount": 600
+		},
+		{
+			"item": "plastanium",
+			"amount": 220
+		},
+		{
+			"item": "surge-alloy",
+			"amount": 300
+		},
+		{
+			"item": "guijingti",
+			"amount": 350
+		},
+		{
+			"item": "zijing1",
+			"amount": 20
+		}
+	]
+}

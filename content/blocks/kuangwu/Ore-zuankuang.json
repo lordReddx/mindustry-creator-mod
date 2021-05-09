@@ -1,0 +1,8 @@
+{
+	"type": "OreBlock",
+	"itemDrop": "zuankuang",
+	//"name":"钻石原矿",
+	"playerUnmineable": false,
+	"variants": 4//贴图数量
+	"useColor":true
+}

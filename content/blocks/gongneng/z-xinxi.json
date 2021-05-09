@@ -1,0 +1,20 @@
+{   
+    
+    "name": "[green]Message",
+    "description": "",
+    //"type": "MessageBlock",
+    "buildVisibility": "sandboxOnly",
+    "targetable":false,
+    "update": false,//true
+    "solid": false,
+
+
+
+
+    "health": 1,
+    "size": 2   ,
+    "requirements": [{ "item": "invalid", "amount":1}],
+    "category": "logic"
+
+   
+}

@@ -1,0 +1,4 @@
+{
+    "buildVisibility": "campaignOnly",//仅战役
+    "category": "effect"
+}

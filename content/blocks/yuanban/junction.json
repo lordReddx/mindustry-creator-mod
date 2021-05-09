@@ -1,0 +1,5 @@
+{
+  "speed": 0,
+ // "itemCapacity": 1,连接器
+  "canOverdrive": true
+}
