@@ -1,0 +1,12 @@
+{
+    ////"name": "魔力液",//液氮
+    //"type": "ShallowLiquid",
+    // //"description": ".",
+    "flammability": 0, //可燃性
+    "temperature": 0, //温度
+    "heatCapacity": 0.8, //装弹速度
+    "viscosity": 0, //粘度
+    "heatcapacity": 0, //热熔
+    "explosiveness": 0, //爆炸
+    "color": "28004D"
+}

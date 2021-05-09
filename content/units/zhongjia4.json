@@ -1,0 +1,46 @@
+{"alwaysUnlocked": true ,
+    "type": "mech",
+   // "name": "重甲2",
+  //  "description": "拥有极其厚的血量和护甲，但伤害和移速较低",
+    "speed": 0.38, //速度
+    // "rotateSpeed": 5, //旋转的速度
+    // "baseRotateSpeed": 5, //基础转速
+    "hitSize": 5, //范围
+    "mass": 80, //大小
+    "turnCursor": false,
+    "health": 9000, //血量
+    "itemCapacity": 0, //容量
+    //"engineColor": "84f491", //引擎的颜色
+    //"cellTrnsY": 1,
+    "flying": false, //飞行
+    //"engineSize ": 3, //引擎的大小
+    "isCounted": false,
+    "armor": 1000, //护甲
+    "weapons": [
+        {   "top":false,
+            "shootSound":"flame",
+            "shootY":2,
+            "reload":7,
+            "recoil":1,
+            "reloadTime":30,
+            "ejectEffect":"none",
+            "bullet": {
+                "type": "BasicBulletType",
+                "speed":4,
+                "damage": 2000,
+                "ammoMultiplier": 3,
+                "hitSize": 8,
+             "lifetime": 12
+                "pierce": false,
+                "shootEffect": "shootSmallFlame",
+                "hitEffect": "hitFlameSmall",
+                "despawnEffect": "none",
+                "status": "burning",
+                "keepVelocity": false,
+                "hittable": false
+            }
+
+        }
+    ],
+    //"research": "duo"
+}
