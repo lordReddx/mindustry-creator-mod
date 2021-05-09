@@ -1,0 +1,8 @@
+{
+	"type": "OreBlock",
+	//"name":"魔力石",
+	"itemDrop": "molishi",
+	"playerUnmineable": false,
+	"variants": 3//贴图数量
+	"useColor":true
+}

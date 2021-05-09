@@ -1,0 +1,15 @@
+{   
+    "alwaysUnlocked": false,
+    "name": "null",
+    "buildVisibility": "sandboxOnly",
+    "type": "Wall",
+
+
+
+    "health": 1,
+    "size": 2,
+    "requirements": [{ "item": "invalid", "amount":1}],
+    "category": "logic",
+    "research": "zzzzzzzzzz2",
+    "details":"[red]欢迎提出各种问题，BUG，不合理之处和各种建议。QQ群200951753。验证答案需要首字母大写"
+}

@@ -1,0 +1,57 @@
+//空军工厂
+{
+    "plans": [
+        {
+            "unit": "flare",
+            "requirements": [
+                {
+                    "item": "silicon",
+                    "amount": 15
+                }
+            ],
+            "time": 900
+        },
+        {
+            "unit": "mono",
+            "requirements": [
+                {
+                    "item": "silicon",
+                    "amount": 30
+                },
+                {
+                    "item": "lead",
+                    "amount": 15
+                }
+            ],
+            "time": 2100
+        },
+        {
+            "unit": "1kuangji",
+            "requirements": [
+                {
+                    "item": "shiying",
+                    "amount": 25
+                },
+                {
+                    "item": "lead",
+                    "amount": 20
+                }
+            ],
+            "time": 600
+        },
+        {
+            "unit": "yunshu",
+            "requirements": [
+                {
+                    "item": "shiying",
+                    "amount": 35
+                },
+                {
+                    "item": "lead",
+                    "amount": 50
+                }
+            ],
+            "time": 2400
+        }
+    ]
+}

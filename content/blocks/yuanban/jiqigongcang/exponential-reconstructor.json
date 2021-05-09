@@ -1,0 +1,38 @@
+//T4
+{
+   /*  "requirements": [
+        {"item": "silicon","amount": 1000},
+        {"item": "lead","amount": 2000},
+        {"item": "titanium","amount": 2000},
+        {"item": "buding","amount": 1200},
+        {"item": "thorium","amount": 750}
+    ], */
+    "consumes":{
+        "power":13,
+        "liquid": {
+            "liquid": "cryofluid",
+            "amount": 1},
+        "items":
+            {
+                "items":
+                [
+                    {"item":"guijingti","amount" :460},
+                    {"item":"titanium","amount" :750},
+                    {"item":"plastanium","amount" :650},
+                    {"item":"xi","amount" :220}
+                ]
+            }
+     
+    
+    },
+	"upgrades":[
+		["zenith","antumbra"],
+        ["spiroct","arkyid"],
+        ["fortress","scepter"],
+        ["bryde","sei"],
+        ["mega","quad"],
+        ["quasar","vela"],
+		["3kuangji","4kuangji"]
+
+    ]
+    }

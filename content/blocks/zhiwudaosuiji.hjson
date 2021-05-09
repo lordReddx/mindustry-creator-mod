@@ -1,0 +1,17 @@
+{
+   // name:植物捣碎机
+   // description:描述
+   health:220 ,
+   canOverdrive: false,//不可超速
+	size:2
+	updateEffect: "steam",
+	buildCostMultiplier: 0.6,
+	requirements:[
+		lead/25
+		guijingti/60
+		xi/75
+		jin/2
+	]
+	category:crafting
+	research:e-wenshiqi
+}

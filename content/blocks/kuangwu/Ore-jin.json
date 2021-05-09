@@ -1,0 +1,8 @@
+{
+	"type": "OreBlock",
+	"itemDrop": "jin",
+	//"name":"金",
+	"playerUnmineable": false,
+	"variants": 3//贴图数量
+	"useColor":true
+}

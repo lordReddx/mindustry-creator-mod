@@ -1,0 +1,22 @@
+{
+	"buildCostMultiplier": 3000,
+	"alwaysUnlocked": true,
+	"name":"Map reset tool-地图重置工具"
+	"description": "Map reset tool
+	放置之后双击几次工具之后，重新进入地图生效
+	After placing it, double-click the tool several times to re-enter the map to take effect",
+	"health": 100,
+	"size": 3,
+	"itemCapacity":0,
+	"range": 1,
+	"speed": 1,
+	"bufferCapacity": 500,
+	"requirements": [
+		  { "item": "copper", "amount":1}
+	],
+	"category": "effect",
+	"research": "core-shard",
+	"targetable": false,
+	"solid": false,
+	"details": "小技巧：使用该工具刷新地图可以重复刷新【元神残片】。你懂的！"
+}

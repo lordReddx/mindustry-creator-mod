@@ -1,0 +1,30 @@
+//T3
+{ 
+    "consumes":{
+        "power":6,
+        "liquid": {
+            "liquid": "moliye",
+            "amount": 0.01},
+        "items":
+            {
+                "items":
+                [
+                    {"item":"guijingti","amount" :50},
+                    {"item":"titanium","amount" :80},
+                    {"item":"metaglass","amount" :40}
+                ]
+            }
+     
+    
+    },
+	"upgrades":[
+		["horizon","zenith"],
+        ["mace","fortress"],
+        ["poly","mega"],
+        ["minke","bryde"],
+        ["pulsar","quasar"],
+        ["atrax","spiroct"],
+		["2kuangji","3kuangji"]
+		
+    ]
+}

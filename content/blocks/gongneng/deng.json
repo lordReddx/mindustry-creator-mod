@@ -1,0 +1,32 @@
+{ //"name": "大型照明灯",
+    //"description": "大范围照明",
+    ////"name": "searchlight",
+    ////"description": "Scat In The Dark",
+    "type": "LightBlock",
+    "size": 3,
+    "health": 100,
+    "brightness": 1.00,
+    "radius": 500,
+    "consumes": {
+      "power": 2
+    },
+    "requirements": [
+      {
+        "item": "zijing1",
+        "amount": 3
+      },
+      {
+        "item": "guijingti",
+        "amount": 50
+      },
+      {
+        "item": "metaglass",
+        "amount": 20
+      },{
+        "item": "shimoxi",
+        "amount": 80
+      }
+    ],
+    "category": "effect",
+    "research": "illuminator"
+  }

@@ -1,0 +1,60 @@
+{  "alwaysUnlocked": false, //永远解锁
+    // "type": "LiquidConverter",
+    //"name": "魔力精华提炼机",
+    //"description": "production scrap",
+    "buildCostMultiplier": 1,
+    "health": 850,
+    "itemCapacity": 10,
+    "outputLiquid": {
+        "liquid": "molijinghuaye",
+        "amount": 20
+    },
+    "size": 2,
+    "liquidCapacity": 50,
+    "hasLiquids": true,
+    "drawer": "DrawMixer",
+    "outputsLiquid": true,
+    "solid": true,
+    "hasPower": true,
+    "hasItems": true,
+    "craftTime": 120,
+    "updateEffect": "smoke",
+    "consumes": {
+        "power": 3,
+        "items": {
+            "items": [
+                {
+                    "item": "monengjing1",
+                    "amount": 1
+                }{
+                    "item": "buding",
+                    "amount": 5
+                }
+            ]
+        },
+        "liquid": {
+            "liquid": "zhiwujinghuaye",
+            "amount": 0.255
+        }
+    },
+    "requirements": [
+        {
+            "item": "metaglass",
+            "amount": 160
+        }
+        {
+            "item": "zuanjing",
+            "amount": 150
+        } 
+        {
+            "item": "monengjing1",
+            "amount": 2
+        }
+        {
+            "item": "guijingti",
+            "amount": 420
+        }
+    ],
+    "category": "crafting",
+    // "research": "h-1jimonengjinglianzhiqi"
+}

@@ -1,0 +1,7 @@
+{
+    "type": "Floor",
+    "placeableOn":false ,
+    "name": "地板",
+    //"size": 1,
+    "variants": 1
+}

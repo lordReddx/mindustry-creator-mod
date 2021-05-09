@@ -1,0 +1,67 @@
+{  "alwaysUnlocked": false, //永远解锁
+    // "type": "LiquidConverter",
+    //"name": "离子液机",
+    //"description": "production scrap",
+    "health": 880,
+    "buildCostMultiplier": 0.4,
+    "itemCapacity": 20,
+    "liquidCapacity": 50,
+    "outputLiquid": {
+        "liquid": "liziye",
+        "amount": 1
+    },
+    "size": 3,
+    "drawer": "DrawMixer",
+    "solid": true,
+    "outputsLiquid": true,
+    "hasPower": true,
+    "hasItems": true,
+    "craftTime": 90,
+    //"updateEffect": "smoke",
+    "consumes": {
+        "power": 7,
+        "items": {
+            "items": [
+                {
+                    "item": "blast-compound",
+                    "amount": 3
+                },
+                {
+                    "item": "xiao",
+                    "amount": 8
+                },
+                {
+                    "item": "monengjing1",
+                    "amount": 5
+                }
+            ]
+        },
+        "liquid": {
+            "liquid": "slag",
+            "amount": 0.2
+        }
+    },
+    "requirements": [
+        {
+            "item": "monengjing1",
+            "amount": 20
+        }{
+            "item": "zuanjing",
+            "amount": 180
+        }{
+            "item": "weijing3",
+            "amount": 8
+        }{
+            "item": "weijing2",
+            "amount": 60
+        }{
+            "item": "xi",
+            "amount": 350
+        }{
+            "item": "metaglass",
+            "amount": 80
+        }
+    ],
+    "category": "crafting",
+    // "research": "lengdongyehunheji"
+}

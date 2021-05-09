@@ -1,0 +1,8 @@
+{
+	"type": "OreBlock",
+	"itemDrop": "xi",
+	//"name":"锡",
+	"playerUnmineable": false,
+	"variants": 3,//贴图数量
+	"useColor":true
+}

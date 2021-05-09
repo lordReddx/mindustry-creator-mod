@@ -1,0 +1,72 @@
+{"canOverdrive": true,
+   // "name": "审判",
+  //  "description": "超大型激光炮塔,范围大，持续长，充能短等优点",
+    //"type": "LaserTurret",
+    "size": 4,
+    "health": 2600,
+    "buildCostMultiplier": 0.5,
+    "heatColor": "71ffd5",
+    "loopSound": "beam",
+    "shootSound": "laserbig",
+   // "buildingDamageMultiplier": 0.1,//建筑损坏倍数
+    "range": 320,
+    "firingMoveFract": 0.5,
+    "inaccuracy": 0,
+    "recoilAmount": 7,
+    "rotateSpeed": 4,
+    "shootShake": 1,
+    "shootCone": 5,
+    "coolEffect": "steam",
+    "cooldown": 1,
+    "shootType": {
+        "type": "ContinuousLaserBulletType",
+        "hitEffect": "hitMeltdown",
+        "length": 320,
+        "damage": 140,
+        "incendChance": 0.8,
+        "incendSpread": 5,
+        "incendAmount": 1,
+        "width": 10,
+        "colors": [
+            "bff28d", "bff28d", "FFFF37"
+        ]
+    },
+    "consumes": {
+        "liquid": {
+            "liquid": "zhiwujinghuaye",
+            "amount": 0.0166667,
+            "booster": false
+        }
+    },
+    "powerUse": 75,
+    "reloadTime": 1,
+    "shootDuration": 300, //炮口停留时间
+    "requirements": [
+        {
+            "item": "lead",
+            "amount": 1500
+        },
+        {
+            "item": "copper",
+            "amount": 1300
+        },
+        {
+            "item": "surge-alloy",
+            "amount": 750
+        },
+        {
+            "item": "guijingti",
+            "amount": 550
+        },
+        {
+            "item": "zijing1",
+            "amount": 150
+        },
+        {
+            "item": "xi",
+            "amount": 900
+        }
+    ],
+    "category": "turret",
+    "research": "meltdown"
+}

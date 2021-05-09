@@ -1,0 +1,19 @@
+"ammoTypes": {
+	"metaglass": "fragGlass",
+	"surge-alloy": "fragSurge",
+	"plastanium": "fragPlastic",
+	"blast-compound": "fragExplosive",
+	"guijingti": {
+		"type": "BasicBulletType",
+		"damage": 3,
+		"speed": 4,
+		"width": 10,
+		"height": 10,
+		"lifetime": 50,
+		"hitEffect": "blastExplosion",
+		"splashDamageRadius": 18,
+		"splashDamage": 27,
+		"ammoMultiplier": 2
+	}
+}
+//气旋炮

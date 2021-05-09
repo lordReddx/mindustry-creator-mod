@@ -1,0 +1,4 @@
+{
+    "buildVisibility": "sandboxOnly", //仅战役
+    "category": "effect"
+}

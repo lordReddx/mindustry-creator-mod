@@ -1,0 +1,68 @@
+{  "alwaysUnlocked": false, //永远解锁
+    // "type": "LiquidConverter",
+    //"name": "液氮",
+    //"description": "production scrap",
+    "health": 1880,
+    "buildCostMultiplier": 0.4,
+    "itemCapacity": 50,
+    "liquidCapacity": 50,
+    "outputLiquid": {
+        "liquid": "qiangxiaolengqueye",
+        "amount": 15
+    },
+    "size": 4,
+    "drawer": "DrawMixer",
+    "solid": true,
+    "outputsLiquid": true,
+    "hasPower": true,
+    "hasItems": true,
+    "craftTime": 480,
+    //"updateEffect": "smoke",
+    "consumes": {
+        "power": 11,
+        "items": {
+            "items": [
+                {
+                    "item": "buding",
+                    "amount": 20
+                },
+                {
+                    "item": "xi",
+                    "amount": 10
+                },
+                {
+                    "item": "weijing2",
+                    "amount": 1
+                }
+                {
+                    "item": "juhebaozhawu",
+                    "amount": 4
+                }
+            ]
+        },
+        "liquid": {
+            "liquid": "cryofluid",
+            "amount": 0.25
+        }
+    },
+    "requirements": [
+        {
+            "item": "monengjing2",
+            "amount": 15
+        }{
+            "item": "zuanjing",
+            "amount": 180
+        }{
+            "item": "weijing3",
+            "amount": 50
+        }{
+            "item": "xi",
+            "amount": 350
+        }{
+            "item": "jin",
+            "amount": 180
+        }
+    ],
+    "category": "crafting",
+    // "research": "lengdongyehunheji"
+}

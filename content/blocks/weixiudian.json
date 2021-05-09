@@ -1,0 +1,21 @@
+{
+	"type": "RepairPoint",
+	//"name": "高级治疗器",
+	////"name": "Large maintenance point",
+	//"description": "",
+	////"description": "Fast manicure factory",
+	"size": 2,
+	"health": 360,
+	"repairRadius": 240,
+	"repairSpeed": 1.8,
+	"powerUse": 2.5
+	"requirements": [
+		{ "item": "copper", "amount": 60 },
+		{ "item": "lead", "amount": 60 },
+		{ "item": "guijingti", "amount": 30 },
+		{ "item": "xi", "amount": 30 },
+		{ "item": "jin", "amount": 3 },
+	]
+	"category": "units",
+	"research": "repair-point"
+}

@@ -1,0 +1,95 @@
+
+ {
+     "canOverdrive": true,
+     //"name": "冥王",
+     //"description": "别看面板伤害低，实际伤害超高，量多可秒杀主流BOSS。每根闪电有60伤害，总闪电伤害上千",
+    // "type": "LaserTurret",
+     "size": 5,
+     "liquidCapacity": 2000,
+     "health": 4200,
+     "buildCostMultiplier": 0.5,
+     "heatColor": "d98686",
+     "shootEffect": "shootBig",
+     //"ammoPerShot": 1,
+     "buildingDamageMultiplier": 0.1,
+     "range": 320,
+     "firingMoveFract": 0.5,
+     "inaccuracy": 0,
+     "recoilAmount": 7,
+     "rotateSpeed": 4,
+     "shootShake": 1,
+     "shootCone": 5,
+     "coolEffect": "steam",
+     "cooldown": 1,
+     "consumes": {
+         "liquid": {
+             "liquid": "water",
+             "amount": 33.3334,
+             "booster": false
+         }
+     },
+     "shootType": {
+         "type": "BasicBulletType", //320
+         "recoil": 0, //反冲
+         "width": 22,
+         "height": 30,
+         "speed": 4,
+         "damage": 22,
+         "ammoMultiplier": 3,
+         "hitSize": 8,
+         "lifetime": 80,
+         "pierce": false,
+         "liquidCapacity": 500,
+       //  "shootEffect": "youling2",
+         //"hitEffect": "hitFlameSmall",
+         //"despawnEffect": "none",
+         "lightning": 20, //闪电伤害
+         "lightningLength": 16, //闪电长度
+         //"status": "burning",
+         "keepVelocity": false,
+         "backColor": "cbb0ff", //背景颜色
+         "frontColor": "cbb0ff", //前面颜色
+         "hittable": false
+     },
+     "shootSound": "youling22",
+     "powerUse": 180,
+     "reloadTime": 130,
+     "shootDuration": 3, //炮口停留时间
+     "requirements": [
+         {
+             "item": "lead",
+             "amount": 4500
+         },
+         {
+             "item": "copper",
+             "amount": 3200
+         },
+         {
+             "item": "zuanjing",
+             "amount": 1800
+         },
+         {
+             "item": "guijingti",
+             "amount": 2500
+         },
+         {
+             "item": "weijing2",
+             "amount": 120
+         },
+         {
+             "item": "molishi",
+             "amount": 750
+         },
+         {
+             "item": "jin",
+             "amount": 1760
+         },
+         {
+             "item": "weijing1",
+             "amount": 150
+         }
+     ],
+     "category": "turret",
+     "research": "spectre"
+    // "details": "虽可被超速器影响，但实际射速不会被加快，只会引起更多电能消耗的负面影响，建议配合反加速方块使用"
+ }

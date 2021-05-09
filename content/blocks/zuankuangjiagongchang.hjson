@@ -1,0 +1,16 @@
+{
+   // name:钻矿加工厂
+   // description:描述
+   "health":260 ,
+	size:2
+	updateEffect: "steam",
+	buildCostMultiplier: 0.6,
+	requirements:[
+		lead/55
+		guijingti/70
+		surge-alloy/35
+		zuanjing/8
+	]
+	category:crafting
+	research:zuanjingjiagongchang
+}

@@ -1,0 +1,289 @@
+{
+    //"name": "天尊级单位重构工厂",
+    //"description": "直接铸造T5级单位，但需要更多的资源输入",
+    "health": 4590,
+    "size": 9,
+    "type": "UnitFactory",
+    //"constructTime": 180,
+    "plans": [
+        {
+            "unit": "eclipse", //日食
+            "requirements": [
+                {
+                    "item": "weijing2",
+                    "amount": 10
+                },
+                {
+                    "item": "guijingti",
+                    "amount": 1300
+                },
+                {
+                    "item": "plastanium",
+                    "amount": 950
+                },
+                {
+                    "item": "surge-alloy",
+                    "amount": 650
+                },
+                {
+                    "item": "phase-fabric",
+                    "amount": 480
+                },
+                {
+                    "item": "jin",
+                    "amount": 260
+                },
+                {
+                    "item": "silicon",
+                    "amount": 700
+                }
+            ],
+            "time": 12000
+        },
+        {
+            "unit": "toxopid", //蜘蛛
+            "requirements": [
+                {
+                    "item": "weijing2",
+                    "amount": 20
+                },
+                {
+                    "item": "guijingti",
+                    "amount": 1300
+                },
+                {
+                    "item": "plastanium",
+                    "amount": 950
+                },
+                {
+                    "item": "surge-alloy",
+                    "amount": 650
+                },
+                {
+                    "item": "phase-fabric",
+                    "amount": 480
+                },
+                {
+                    "item": "jin",
+                    "amount": 260
+                },
+                {
+                    "item": "zijing1",
+                    "amount": 300
+                }
+            ],
+            "time": 12000
+        },
+        {
+            "unit": "reign", //王座
+            "requirements": [
+                {
+                    "item": "weijing2",
+                    "amount": 15
+                },
+                {
+                    "item": "guijingti",
+                    "amount": 1300
+                },
+                {
+                    "item": "plastanium",
+                    "amount": 950
+                },
+                {
+                    "item": "surge-alloy",
+                    "amount": 650
+                },
+                {
+                    "item": "phase-fabric",
+                    "amount": 480
+                },
+                {
+                    "item": "jin",
+                    "amount": 260
+                },
+                {
+                    "item": "thorium",
+                    "amount": 700
+                }
+            ],
+            "time": 12000
+        },
+        {
+            "unit": "omura", //海神
+            "requirements": [
+                {
+                    "item": "weijing2",
+                    "amount": 30
+                },
+                {
+                    "item": "guijingti",
+                    "amount": 1300
+                },
+                {
+                    "item": "plastanium",
+                    "amount": 950
+                },
+                {
+                    "item": "surge-alloy",
+                    "amount": 650
+                },
+                {
+                    "item": "phase-fabric",
+                    "amount": 480
+                },
+                {
+                    "item": "jin",
+                    "amount": 260
+                }
+                {
+                    "item": "metaglass",
+                    "amount": 900
+                }
+            ],
+            "time": 12000
+        },
+        {
+            "unit": "oct", //要塞
+            "requirements": [
+                {
+                    "item": "weijing2",
+                    "amount": 5
+                },
+                {
+                    "item": "guijingti",
+                    "amount": 1300
+                },
+                {
+                    "item": "plastanium",
+                    "amount": 950
+                },
+                {
+                    "item": "surge-alloy",
+                    "amount": 650
+                },
+                {
+                    "item": "phase-fabric",
+                    "amount": 480
+                },
+                {
+                    "item": "jin",
+                    "amount": 260
+                }
+                {
+                    "item": "xi",
+                    "amount": 450
+                }
+            ],
+            "time": 12000
+        },
+        {
+            "unit": "vela", //死星
+            "requirements": [
+                {
+                    "item": "weijing2",
+                    "amount": 20
+                },
+                {
+                    "item": "guijingti",
+                    "amount": 1300
+                },
+                {
+                    "item": "plastanium",
+                    "amount": 950
+                },
+                {
+                    "item": "surge-alloy",
+                    "amount": 650
+                },
+                {
+                    "item": "phase-fabric",
+                    "amount": 480
+                },
+                {
+                    "item": "jin",
+                    "amount": 260
+                },
+                {
+                    "item": "titanium",
+                    "amount": 700
+                }
+            ],
+            "time": 12000
+        },
+        {
+            "unit": "5kuangji", //5级矿机
+            "requirements": [
+                {
+                    "item": "weijing2",
+                    "amount": 20
+                },
+                {
+                    "item": "guijingti",
+                    "amount": 1300
+                },
+                {
+                    "item": "plastanium",
+                    "amount": 950
+                },
+                {
+                    "item": "surge-alloy",
+                    "amount": 650
+                },
+                {
+                    "item": "phase-fabric",
+                    "amount": 480
+                },
+                {
+                    "item": "jin",
+                    "amount": 700
+                }
+               
+            ],
+            "time": 12000
+        }
+    ],
+    "liquidCapacity": 180,
+    "requirements": [
+        {
+            "item": "guijingti",
+            "amount": 3200
+        },
+        {
+            "item": "plastanium",
+            "amount": 1500
+        },
+        {
+            "item": "lead",
+            "amount": 5000
+        },
+        {
+            "item": "metaglass",
+            "amount": 1200
+        },
+        {
+            "item": "titanium",
+            "amount": 2500
+        },
+        {
+            "item": "buding",
+            "amount": 3200
+        },
+        {
+            "item": "weijing1",
+            "amount": 600
+        }
+        {
+            "item": "weijing2",
+            "amount": 120
+        }
+    ],
+    "consumes": {
+        "power": 46.6667,
+        "liquid": {
+            "liquid": "molijinghuaye",
+            "amount": 1
+        }
+    },
+    "category": "units",
+    "research": "tetrative-reconstructor"
+}

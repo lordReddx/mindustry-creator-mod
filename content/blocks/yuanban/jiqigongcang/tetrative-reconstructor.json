@@ -1,0 +1,41 @@
+//T5
+{
+    
+    /* "requirements": [
+        {"item": "silicon","amount": 3000},
+        {"item": "lead","amount": 4000},
+        {"item": "titanium","amount": 2000},
+        {"item": "buding","amount": 3000},
+        {"item": "zijing1","amount":220}
+    ], */
+    "consumes":{
+    "power":25,
+    "liquid": {
+        "liquid": "cryofluid",
+        "amount": 3},
+    "items":
+        {
+            "items":
+            [
+                {"item":"guijingti","amount" :800},
+                {"item":"plastanium","amount" :600},
+                {"item":"surge-alloy","amount" :500},
+                {"item":"phase-fabric","amount" :350},
+                {"item":"jin","amount" :120}
+            ]
+        }
+ 
+
+},
+    
+	"upgrades":[
+		["antumbra","eclipse"],
+        ["arkyid","toxopid"],
+        ["scepter","reign"],
+        ["sei","omura"],
+        ["quad","oct"],
+        ["vela","corvus"],
+		["4kuangji","5kuangji"]
+		
+    ]
+}
