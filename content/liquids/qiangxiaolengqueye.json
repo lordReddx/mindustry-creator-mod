@@ -1,0 +1,11 @@
+{
+    ////"name": "强效冷却液",//液氮
+    "alwaysUnlocked": false, //永远解锁
+   // //"description": ".",
+    "flammability": 0,//可燃性
+    "temperature": 0,//温度
+    "heatCapacity":3.8,//装弹速度
+    "viscosity": 0.5,//粘度
+    "explosiveness": 0,//爆炸
+    "color": "ffffff"
+}

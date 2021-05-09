@@ -1,0 +1,13 @@
+{
+   "alwaysUnlocked": true,
+   // //"name": "植物精华液",//液氮
+   "type": "liquids",
+   ////"description": ".",
+   "flammability": 0, //可燃性
+   "temperature": 0, //温度
+   "heatCapacity": 0.6, //装弹速度
+   "viscosity": 0, //粘度
+   "heatcapacity": 0, //热熔
+   "explosiveness": 0, //爆炸
+   "color": "CEFFCE"
+}

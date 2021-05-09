@@ -1,0 +1,116 @@
+{
+    "alwaysUnlocked": true,
+    "type": "flying",
+    //"name": "终极",
+    // "description": "本模组的最终BOSS 普通武器有150电击伤害 武器可以用阻电墙格挡电击",
+    "speed": 0.2, //速度
+    "lowAltitude": true,
+    "rotateSpeed": 0.5, //旋转的速度
+    "baseRotateSpeed": 5, //基础转速
+    "hitSize": 88, //单位的大小
+    "mass": 120, //单位的质量
+    "turnCursor": true,
+    "health": 140000, //血量
+    "itemCapacity": 2000, //容量
+    "engineColor": "ff001e", //引擎的颜色
+    //"cellTrnsY": 1,
+    "flying": true, //飞行
+    "engineOffset": 40,
+    "engineSize": 10,
+    "isCounted": false,
+    "armor": 60000, //护甲
+    "weapons": [
+        {
+            "top": false,
+            "shootSound": "shootBig",
+            "name": "zhongji-s-large",
+            "rotate": false, //武器旋转
+            "shootY": 2,
+            "reload": 14,
+            "recoil": 1,
+            "reloadTime": 15,
+            "ejectEffect": "casing1",
+            "x": 25,
+            "y": 15,
+            "bullet": {
+                "type": "BasicBulletType", //320
+                "recoil": 0, //反冲
+                "width": 22,
+                "height": 30,
+                "speed": 4,
+                "damage": 1800,
+                "ammoMultiplier": 3,
+                "hitSize": 8,
+                "lifetime": 80,
+                "pierce": false,
+                "shootEffect": "shootBig",
+                //"hitEffect": "hitFlameSmall",
+                //"despawnEffect": "none",
+                "lightning": 150, //闪电伤害
+                "lightningLength": 7, //闪电长度
+                //"status": "burning",
+                "keepVelocity": false,
+                "backColor": "cbb0ff", //背景颜色
+                "frontColor": "cbb0ff", //前面颜色
+                "hittable": false
+            }
+        },
+        {
+            //"shootEffect": "s-zhongji",
+            "shootSound": "s-zhongji",
+            //"chargeSound": "s-zhongji",
+            "name": "zhongji-s-heat",
+            "rotate": true, //武器旋转
+            "top": false,
+            "mirror": true,
+            "continuous": true,
+            "shootY": 5,
+            "reload": 14, //子弹射速
+            "recoil": 0, //反冲
+            "reloadTime": 15,
+            "x": 30,
+            "y": -20,
+            "ejectEffect": "casing1",
+            // "firstShotDelay":65,
+            // "shootStatus":"unmoving",//发射状态
+            "bullet": {
+                "type": "LaserBulletType", //320
+                "colors": [
+                    "ab57ff" ,"e2c5ff" ,"ffffff"
+                ],
+                "length": 460,
+                "damage": 560,
+                "width": 75,
+                "despawnEffect": "none",
+                "lifetime": 65,
+                "hitEffect": "hitLancer",
+                "lightningSpacing": 35,
+                "lightningLength": 5,
+                "lightningDelay": 1.1,
+                "lightningLengthRand": 15,
+                "lightningDamage": 50,
+                "lightningAngleRand": 40,
+                "lightningColor": "b468ff"
+            }
+        }
+    ]
+    //"research": "duo"
+}
+// "lightningSpacing": 35,
+// "lightningLength": 5,
+// "lightningDelay": 1.1,
+// "lightningLengthRand": 15,
+// "lightningDamage": 50,
+// "lightningAngleRand": 40,
+// "largeHit": true,
+// "reloadMultiplier": 0.5,
+// "shootEffect": "greenLaserCharge",
+// //"healPercent": 0.001,//治愈百分比
+// "collidesTeam": true,
+// "pierce": true,
+// "sideAngle": 15,
+// "sideWidth": 0,
+// "sideLength": 0,
+// "speed": 4,
+// "lifetime": 65,
+// "status": "burning",

@@ -1,0 +1,37 @@
+{"commandLimit":0,
+    "name": "毁灭",
+    "description": "强制结束游戏。创作者在制作地图时加入的规则性质怪物",
+    //规则
+    "weapons": [
+        {
+            "top": false,
+            "shootSound": "none",
+            "shootY": 2,
+            "reload": 7,
+            "armor": 2100000000,
+            "recoil": 0,
+            "shootStatus": "none",
+            "reloadTime": 1,
+            "rotate": true,
+            "ejectEffect": "none",
+            "bullet": {
+                "type": "BasicBulletType",
+                "recoil": 0,//后座
+                "speed": 4000,
+                "damage": 999999999,
+                "lifetime": 99999,
+                "pierce": true, //穿透
+                "pierceCap":1000,//穿透数量
+                "homingPower":10,
+                "splashDamageRadius": 4000, //分裂范围
+                "splashDamage": 999999999, //分裂的伤害
+                "width": 1,
+                "height": 1,
+                "shrinkY":1,
+                "keepVelocity": false,
+                "smokeEffect": "none",
+                "shootEffect": "none"
+            }
+        }
+    ]
+}

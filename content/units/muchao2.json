@@ -1,0 +1,30 @@
+{
+    // "name": "母巢2",
+
+ 
+    "weapons": [
+        {
+            // "top": false,
+           // "shootSound": "none",
+            "shootY": 2,
+            "reload": 7,
+            "recoil": 0,
+            "shootStatus": "unmoving",
+            "reloadTime": 1,
+            "rotate":true,
+            "ejectEffect": "none",
+            "bullet": {
+                "type": "BasicBulletType",
+                "speed": 10,
+                "damage": 30,
+                "lifetime": 51,
+                "pierce": false,
+                "width": 10,
+                "height": 8,
+                "keepVelocity": false,
+              //  "smokeEffect":"none",
+              //  "shootEffect":"none"
+            }
+        }
+    ]
+}

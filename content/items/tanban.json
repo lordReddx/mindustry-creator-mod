@@ -1,0 +1,8 @@
+{
+"type":"material",
+////"name":"碳板",
+"flammability":2//可燃性
+//radioactivity:1//放射
+////"description":"",
+"color":"2a2a27"
+}
