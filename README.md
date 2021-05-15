@@ -10,6 +10,7 @@
 - Unit: 43
 - Map: 40
 - Planets: 11
+- This module is mainly used to upgrade factory resources. Defending the enemy is secondary.
 - If you like this module, please click thumbs on this page *⸜(^_^)⸝*
 - Subsequent will update more if you have Suggestions or comments please go to the QQ group 200951753 and discussion of the author.
 - Or send email to cyj674971336@163.com
@@ -29,7 +30,7 @@
 - 单位：43
 - 地图：40
 - 行星：11
-
+- 本模组主要是工厂资源升级玩法。防守敌人次要的
 - 如果您觉得此模组不错，请对本模组点赞*⸜(^_^)⸝*
 - 如果你有建议或者意见请到QQ群200951753与作者讨论。或者发送邮件至cyj674971336@163.com
 - —————————————————————————创世神-creator
