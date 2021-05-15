@@ -39,7 +39,7 @@ const {
     molijinghuaye, moliye, qiangxiaolengqueye, zhiwujinghuaye
 } = items;
 //--------------------------------------------------------------------------//
-    var 二级子弹 = (() => {
+    var dafengche = (() => {
     const SPEEF = 4;
     const laser01 = new JavaAdapter(ContinuousLaserBulletType, {
     }, 70);
@@ -168,7 +168,8 @@ DianHu.requirements = ItemStack.with(
     Items.lead, 400,
     Items.copper, 350,
     guijingti, 120,
-    shimoxi, 80,
+    zijing1, 10,
+    shimoxi, 150,
 );
 DianHu.buildVisibility = BuildVisibility.shown;
 DianHu.category = Category.turret;
@@ -229,7 +230,7 @@ FangKong.category = Category.turret;
 lib.addToResearch(FangKong, { parent: Blocks.lancer.name, });
 exports.FangKong = FangKong;
 //------------------------------------------------
-const healere = extend(PowerTurret, "zhiliaopao", {
+const healere = extend(PowerTurret, "zhiliaopao", {//治疗炮
 })
 healere.buildType = prov(() => new JavaAdapter(PowerTurret.PowerTurretBuild, {
     collide(other) { return other.owner != this },
@@ -398,7 +399,7 @@ lieguang.targetAir = false; //空
 lieguang.targetGround = true; //地
 lieguang.coolantMultiplier=0.7; //液体冷却倍率
 //lieguang.itemCapacity = 50; //资源容量
-lieguang.reloadTime = 60; //每秒发射数60:1;30:2
+lieguang.reloadTime = 200; //每秒发射数60:1;30:2
 lieguang.range = 216;
 lieguang.liquidCapacity = 10; //液体容量
 lieguang.shootSound = Sounds.shootBig; //统一射击音效
@@ -410,7 +411,7 @@ lieguang.recoilAmount = 1.5;
 lieguang.restitution = 0.04;
 lieguang.rotateSpeed = 80;
 lieguang.shootSound = Sounds.lasershoot;
-lieguang.powerUse = 16;
+lieguang.powerUse = 25;
 lieguang.hasPower = true;
 lieguang.requirements = ItemStack.with(
     Items.lead, 560,
@@ -746,7 +747,7 @@ Wmonengjing2.ammoMultiplier = 1; //装弹数量
 Wmonengjing2.trailEffect = Fx.smoke;
 Wmonengjing2.shootEffect = Fx.shootSmall;
 Wmonengjing2.fragBullets = 4;
-Wmonengjing2.fragBullet = 二级子弹;
+Wmonengjing2.fragBullet = dafengche;
 
 
 const bawang = extend(ItemTurret, 'bawang', {})

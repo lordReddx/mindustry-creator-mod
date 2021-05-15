@@ -343,7 +343,8 @@ weicang.itemCapacity = 100;
 weicang.hasItems = true;
 weicang.buildCostMultiplier = 0.3;
 weicang.requirements = ItemStack.with(
-    Items.titanium, 30,
+    Items.copper, 30,
+    Items.lead, 30,
     guijingti, 20,
     shiying, 45,
 );
@@ -424,7 +425,7 @@ exports.jicangku6 = jicangku6;
 const huanchongcang = extend(StorageBlock, "huanchongcang", {});//缓冲仓
 huanchongcang.size = 8;
 huanchongcang.health = 1200;
-huanchongcang.itemCapacity = 300;
+huanchongcang.itemCapacity = 500;
 huanchongcang.hasItems = true;
 huanchongcang.buildCostMultiplier = 0.3;
 huanchongcang.requirements = ItemStack.with(
@@ -513,7 +514,7 @@ jibaozhuangyunshudai2.requirements = ItemStack.with(
     zijing1, 1
 );
 jibaozhuangyunshudai2.buildVisibility = BuildVisibility.shown;
-jibaozhuangyunshudai2.category = Category.production;
+jibaozhuangyunshudai2.category = Category.distribution;
 lib.addToResearch(jibaozhuangyunshudai2, { parent: Blocks.plastaniumConveyor.name, });
 exports.jibaozhuangyunshudai2 = jibaozhuangyunshudai2;
 //-----------------------------------------------------------
@@ -591,7 +592,7 @@ jibaozhuangyunshudai3.requirements = ItemStack.with(
     zijing1, 5,
 );
 jibaozhuangyunshudai3.buildVisibility = BuildVisibility.shown;
-jibaozhuangyunshudai3.category = Category.production;
+jibaozhuangyunshudai3.category = Category.distribution;
 lib.addToResearch(jibaozhuangyunshudai3, { parent: jibaozhuangyunshudai2.name, });
 exports.jibaozhuangyunshudai3 = jibaozhuangyunshudai3;
 //-----------------------------------------------------------
@@ -1077,7 +1078,7 @@ jitaiyangneng3.liquidCapacity = 10;
 jitaiyangneng3.powerProduction = 2.5;
 jitaiyangneng3.requirements = ItemStack.with(
     shimoxi, 210,
-    zijing1, 2010,
+    tanban, 3,
     Items.phaseFabric, 25,
     guijingti, 130,
     xi, 80,
@@ -1092,12 +1093,12 @@ jitaiyangneng4.health = 630;
 jitaiyangneng4.size = 3;
 jitaiyangneng4.hasPower = true;
 jitaiyangneng4.buildCostMultiplier = 0.3;
-jitaiyangneng4.itemDuration = 420;
+jitaiyangneng4.itemDuration = 360;
 jitaiyangneng4.itemCapacity = 3;
 jitaiyangneng4.liquidCapacity = 10;
-jitaiyangneng4.powerProduction = 30;
+jitaiyangneng4.powerProduction = 32;
 jitaiyangneng4.consumes.items(ItemStack.with(
-    tanban, 2,
+    tanban, 1,
 ));
 jitaiyangneng4.requirements = ItemStack.with(
     shimoxi, 210,
@@ -1378,6 +1379,7 @@ weijingzuantou1.hardnessDrillMultiplier = 2.5;
 weijingzuantou1.rotateSpeed = 7;
 weijingzuantou1.drillTime = 210;
 weijingzuantou1.drillEffect = Fx.hitBulletBig;
+weijingzuantou1.liquidCapacity = 12;
 weijingzuantou1.hasShadow = true;
 weijingzuantou1.drawMineItem = true;
 weijingzuantou1.consumes.power(6);
@@ -1404,6 +1406,7 @@ weijingzuantou2.rotateSpeed = 10;
 weijingzuantou2.drillTime = 75;
 weijingzuantou2.drillEffect = Fx.hitBulletBig;
 weijingzuantou2.hasShadow = true;
+weijingzuantou2.liquidCapacity = 15;
 weijingzuantou2.drawMineItem = true;
 weijingzuantou2.consumes.power(20);
 weijingzuantou2.consumes.liquid(molijinghuaye, 0.1);
@@ -1462,6 +1465,7 @@ zuantou.hardnessDrillMultiplier = 0;
 zuantou.warmupSpeed = 0.01;
 zuantou.drawMineItem = false;
 //zuantou.drillEffect = Fx.lightningCharge;
+
 zuantou.rotateSpeed = 6;
 zuantou.updateEffectChance = 0.2;
 zuantou.updateEffect = Fx.lightningCharge;
@@ -1487,6 +1491,7 @@ weijingzuantou3.hardnessDrillMultiplier = 2.5;
 weijingzuantou3.updateEffectChance = 0.015;
 weijingzuantou3.rotateSpeed = 10;
 weijingzuantou3.drillTime = 50;
+weijingzuantou3.liquidCapacity = 15;
 weijingzuantou3.drillEffect = Fx.hitBulletSmall;
 weijingzuantou3.hasShadow = true;
 weijingzuantou3.drawMineItem = true;
@@ -1541,7 +1546,7 @@ sui.pumpAmount = 0.035;
 sui.result = Liquids.water;
 sui.rotateSpeed = 3;
 sui.warmupSpeed = 0.21;
-sui.liquidCapacity = 0.05;
+sui.liquidCapacity = 5;
 sui.consumes.power(0.4);
 sui.requirements = ItemStack.with(
     Items.copper, 40,
@@ -1779,6 +1784,36 @@ guijingtichengxingji.category = Category.crafting;
 lib.addToResearch(guijingtichengxingji, { parent: chujishiyingronglu.name, });
 exports.guijingtichengxingji = guijingtichengxingji;
 //-----------------------------------------------------------
+const guilu = extend(GenericSmelter, "guilu", {});
+guilu.health = 360;//硅炉
+guilu.size = 2;
+guilu.hasPower = true;
+guilu.hasItems = true;
+guilu.buildCostMultiplier = 0.2;
+guilu.itemCapacity = 20;
+guilu.craftTime = 70;
+guilu.updateEffect = Fx.smoke;
+guilu.consumes.power(3);
+guilu.consumes.items(new ItemStack.with(
+    Items.coal, 2,
+    Items.sand, 3)
+);
+guilu.outputItem = new ItemStack(
+    Items.silicon, 4,
+);
+guilu.requirements = ItemStack.with(
+    Items.copper, 330,
+    Items.lead, 330,
+    Items.titanium, 120,
+    Items.silicon, 220,
+    guijingti, 60,
+    shiying, 450
+);
+guilu.buildVisibility = BuildVisibility.shown;
+guilu.category = Category.crafting;
+lib.addToResearch(guilu, { parent: Blocks.siliconSmelter.name, });
+exports.guilu = guilu;
+//-----------------------------------------------------------
 const guijingtihechengji = extend(GenericSmelter, "a-2guijingtihechengji", {});
 guijingtihechengji.health = 360;//硅晶体合成机
 guijingtihechengji.size = 3;
@@ -1889,6 +1924,34 @@ budingjiagongchang.buildVisibility = BuildVisibility.shown;
 budingjiagongchang.category = Category.crafting;
 lib.addToResearch(budingjiagongchang, { parent: guijingtichengxingji.name, });
 exports.budingjiagongchang = budingjiagongchang;
+//-----------------------------------------------------------
+const budingjiagongchang2 = extend(GenericSmelter, "budingjiagongchang2", {});
+budingjiagongchang2.health = 450;//大型布丁加工厂
+budingjiagongchang2.size = 3;
+budingjiagongchang2.hasPower = true;
+budingjiagongchang2.hasItems = true;
+budingjiagongchang2.hasLiquid = true;
+budingjiagongchang2.craftTime = 80;
+budingjiagongchang2.itemCapacity = 20;
+budingjiagongchang2.updateEffect = Fx.bubble;
+budingjiagongchang2.consumes.power(10);
+budingjiagongchang2.consumes.liquid(Liquids.cryofluid, 0.15);
+budingjiagongchang2.consumes.items(new ItemStack.with(
+    Items.plastanium, 3, Items.phaseFabric, 3)
+);
+budingjiagongchang2.outputItem = new ItemStack(
+    buding, 10,
+);
+budingjiagongchang2.requirements = ItemStack.with(
+    Items.titanium, 650,
+    Items.graphite, 720,
+    guijingti, 200,
+    weijing4, 10,
+);
+budingjiagongchang2.buildVisibility = BuildVisibility.shown;
+budingjiagongchang2.category = Category.crafting;
+lib.addToResearch(budingjiagongchang2, { parent: budingjiagongchang.name, });
+exports.budingjiagongchang2 = budingjiagongchang2;
 //-----------------------------------------------------------
 const jinfentilianji = extend(GenericSmelter, "f-1jinfentilianji", {});
 jinfentilianji.health = 180;//金粉提炼机
@@ -2041,7 +2104,7 @@ jiweijinggongchang2.craftEffect = Fx.mine;
 jiweijinggongchang2.updateEffect = Fx.fireballsmoke;
 jiweijinggongchang2.updateEffectChance = 0.1
 jiweijinggongchang2.consumes.power(2);
-jiweijinggongchang2.consumes.liquid(zhiwujinghuaye, 0.2);
+jiweijinggongchang2.consumes.liquid(zhiwujinghuaye, 0.15);
 jiweijinggongchang2.consumes.items(new ItemStack.with(
     zuanjing, 3,
     weijing1, 2,
@@ -2154,7 +2217,7 @@ jiweijinggongchang5.craftEffect = Fx.fireballsmoke;
 jiweijinggongchang5.updateEffect = Fx.spawnShockwave;
 jiweijinggongchang5.updateEffectChance = 0.1
 jiweijinggongchang5.consumes.power(3000);
-jiweijinggongchang5.consumes.liquid(qiangxiaolengqueye, 0.66666667);
+jiweijinggongchang5.consumes.liquid(qiangxiaolengqueye, 0.46666667);
 jiweijinggongchang5.consumes.items(new ItemStack.with(
     monengjing2, 3,
     buding, 220,
@@ -2179,22 +2242,22 @@ lib.addToResearch(jiweijinggongchang5, { parent: jiweijinggongchang4.name, });
 exports.jiweijinggongchang5 = jiweijinggongchang5;
 //-----------------------------------------------------------
 const weijingfenjieji = extend(GenericSmelter, "weijingfenjieji", {});
-weijingfenjieji.health = 260;//微晶分解机
+weijingfenjieji.health = 2600;//微晶分解机
 weijingfenjieji.size = 2;
 weijingfenjieji.hasPower = true;
 weijingfenjieji.hasItems = true;
 weijingfenjieji.hasLiquid = true;;
 weijingfenjieji.buildCostMultiplier = 0.5;
-weijingfenjieji.itemCapacity = 10;
-weijingfenjieji.craftTime = 390;
+weijingfenjieji.itemCapacity = 20;
+weijingfenjieji.craftTime = 340;
 weijingfenjieji.updateEffect = Fx.steam;
-weijingfenjieji.consumes.power(9);
-weijingfenjieji.consumes.liquid(liziye, 0.02);
+weijingfenjieji.consumes.power(13);
+weijingfenjieji.consumes.liquid(liziye, 0.020001);
 weijingfenjieji.consumes.item(
-    weijing4, 3
+    weijing4, 1
 );
 weijingfenjieji.outputItem = new ItemStack(
-    weijing2, 2,
+    weijing2, 5,
 );
 weijingfenjieji.requirements = ItemStack.with(
     Items.copper, 90,
@@ -2207,6 +2270,42 @@ weijingfenjieji.buildVisibility = BuildVisibility.shown;
 weijingfenjieji.category = Category.crafting;
 lib.addToResearch(weijingfenjieji, { parent: jiweijinggongchang4.name, });
 exports.weijingfenjieji = weijingfenjieji;
+//-----------------------------------------------------------
+const jiweijinggongchang21 = extend(GenericSmelter, "c-2jiweijinggongchang1", {});
+jiweijinggongchang21.health = 1320;//超级微晶工厂2
+jiweijinggongchang21.size = 5;
+jiweijinggongchang21.hasPower = true;
+jiweijinggongchang21.hasItems = true;
+jiweijinggongchang21.hasLiquid = true;
+jiweijinggongchang21.craftTime = 290;
+jiweijinggongchang21.itemCapacity = 80;
+jiweijinggongchang21.craftEffect = Fx.mine;
+jiweijinggongchang21.updateEffect = Fx.fireballsmoke;
+jiweijinggongchang21.updateEffectChance = 0.1
+jiweijinggongchang21.consumes.power(15);
+jiweijinggongchang21.consumes.liquid(molijinghuaye, 0.1);
+jiweijinggongchang21.consumes.items(new ItemStack.with(
+    monengjing1, 5,
+    weijing1, 8,
+    guijingti, 25,
+    Items.surgeAlloy, 30)
+);
+jiweijinggongchang21.outputItem = new ItemStack(
+    weijing2, 5,
+);
+jiweijinggongchang21.requirements = ItemStack.with(
+    Items.copper, 2200,
+    Items.lead, 2300,
+    weijing2, 200,
+    weijing4, 10,
+    monengjing3, 2,
+    guijingti, 1800,
+
+);
+jiweijinggongchang21.buildVisibility = BuildVisibility.shown;
+jiweijinggongchang21.category = Category.crafting;
+lib.addToResearch(jiweijinggongchang21, { parent: jiweijinggongchang2.name, });
+exports.jiweijinggongchang21 = jiweijinggongchang21;
 //-----------------------------------------------------------
 const liziduizhuangji = extend(GenericSmelter, "z-1liziduizhuangji", {});
 liziduizhuangji.health = 2800;//粒子机
@@ -2622,7 +2721,7 @@ exports.zuanjingjiagongchang = zuanjingjiagongchang;
 //-----------------------------------------------------------
 const tanbanyasuoji2 = extend(GenericSmelter, "g-3gaojitanbanyasuoji", {});
 tanbanyasuoji2.health = 320;//高级碳板压缩机
-tanbanyasuoji2.size = 2;
+tanbanyasuoji2.size = 3;
 tanbanyasuoji2.hasPower = true;
 tanbanyasuoji2.hasItems = true;
 tanbanyasuoji2.itemCapacity = 90;
@@ -2673,36 +2772,6 @@ lib.addToResearch(gaojipeiyangji, { parent: Blocks.cultivator.name, });
 exports.gaojipeiyangji = gaojipeiyangji;
 //-----------------------------------------------------------
 
-const guilu = extend(GenericSmelter, "guilu", {});
-guilu.health = 360;//硅炉
-guilu.size = 2;
-guilu.hasPower = true;
-guilu.hasItems = true;
-guilu.buildCostMultiplier = 0.2;
-guilu.itemCapacity = 20;
-guilu.craftTime = 70;
-guilu.updateEffect = Fx.smoke;
-guilu.consumes.power(3);
-guilu.consumes.items(new ItemStack.with(
-    Items.coal, 2,
-    Items.sand, 3)
-);
-guilu.outputItem = new ItemStack(
-    Items.silicon, 4,
-);
-guilu.requirements = ItemStack.with(
-    Items.copper, 330,
-    Items.lead, 330,
-    Items.titanium, 120,
-    Items.silicon, 220,
-    guijingti, 60,
-    shiying, 450
-);
-guilu.buildVisibility = BuildVisibility.shown;
-guilu.category = Category.crafting;
-lib.addToResearch(guilu, { parent: Blocks.siliconSmelter.name, });
-exports.guilu = guilu;
-//-----------------------------------------------------------
 const molishizhizaoqi = extend(GenericSmelter, "molishizhizaoqi", {});
 molishizhizaoqi.health = 220;//魔力石制造机
 molishizhizaoqi.size = 2;
@@ -2859,6 +2928,35 @@ jimonengjinglianzhiqi3.buildVisibility = BuildVisibility.shown;
 jimonengjinglianzhiqi3.category = Category.crafting;
 lib.addToResearch(jimonengjinglianzhiqi3, { parent: jimonengjinglianzhiqi2.name, });
 exports.jimonengjinglianzhiqi3 = jimonengjinglianzhiqi3;
+//-----------------------------------------------------------
+const jimonengjinglianzhiqi4 = extend(GenericSmelter, "h-4jimonengjinglianzhiqi", {});
+jimonengjinglianzhiqi4.health = 550;//高级1级魔能晶制造器
+jimonengjinglianzhiqi4.size = 2;
+jimonengjinglianzhiqi4.hasPower = true;
+jimonengjinglianzhiqi4.hasItems = true;
+jimonengjinglianzhiqi4.buildCostMultiplier = 0.2;
+jimonengjinglianzhiqi4.itemCapacity = 10;
+jimonengjinglianzhiqi4.craftTime = 30;
+jimonengjinglianzhiqi4.updateEffect = Fx.steam;
+jimonengjinglianzhiqi4.consumes.power(12.5);
+jimonengjinglianzhiqi4.consumes.items(new ItemStack.with(
+    molishi, 2,
+    buding, 3)
+);
+jimonengjinglianzhiqi4.outputItem = new ItemStack(
+    monengjing1, 1,
+);
+jimonengjinglianzhiqi4.requirements = ItemStack.with(
+    Items.surgeAlloy, 700,
+    Items.thorium, 2000,
+    monengjing3, 2,
+    guijingti, 1500,
+    weijing5, 3
+);
+jimonengjinglianzhiqi4.buildVisibility = BuildVisibility.shown;
+jimonengjinglianzhiqi4.category = Category.crafting;
+lib.addToResearch(jimonengjinglianzhiqi4, { parent: jimonengjinglianzhiqi3.name, });
+exports.jimonengjinglianzhiqi4 = jimonengjinglianzhiqi4;
 //-----------------------------------------------------------
 const hejin2 = extend(GenericSmelter, "hejin", {});
 hejin2.health = 480;//高效巨浪合金工厂

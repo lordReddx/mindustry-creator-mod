@@ -326,7 +326,7 @@ Events.on(ContentInitEvent, cons(e => {
 
 //锁定区域：
 const GT = require("GradeTwo");
-const GNoeMaps31 = new SectorPreset("GNoeMB31", GNoe, 31);
+const GNoeMaps31 = new SectorPreset("GNoeMB31", GNoe, 100);
 GNoeMaps31.useAI = false
 GNoeMaps31.difficulty = 8;
 GNoeMaps31.localizedName = Core.bundle.format("planet.creator.mb");//蒙蔽
