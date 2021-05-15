@@ -974,7 +974,7 @@ const hunhe4 = extend(Wall, "92hunhe4", {});//魔微墙
 hunhe4.health = 14000;
 hunhe4.size = 4;
 hunhe4.buildCostMultiplier = 200;
-hunhe4.lightningChance = 0.5;
+hunhe4.lightningChance = 0.1;
 hunhe4.lightningLength = 40;
 hunhe4.requirements = ItemStack.with(
     monengjing1, 12,
@@ -991,7 +991,7 @@ qiang.size = 4;
 qiang.buildCostMultiplier = 2;
 qiang.insulated = true;
 qiang.absorbLasers = true;
-qiang.lightningChance = 0.8;
+qiang.lightningChance = 0.5;
 qiang.lightningLength = 64;
 qiang.requirements = ItemStack.with(
     chuangshiweichen, 1,
