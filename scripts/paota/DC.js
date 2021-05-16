@@ -704,7 +704,7 @@ WmonengjingA.height = 13;
 WmonengjingA.trailEffect = Fx.none;
 WmonengjingA.homingRange = 40000;
 WmonengjingA.homingPower = 2;
-WmonengjingA.lifetime = 10000;
+WmonengjingA.lifetime = 1000;
 WmonengjingA.speed = 1.3;
 WmonengjingA.hitEffect = Fx.flakExplosion
 //WmonengjingA.collidesTiles = false;
@@ -750,7 +750,7 @@ Wmonengjing2.fragBullets = 4;
 Wmonengjing2.fragBullet = dafengche;
 
 
-const bawang = extend(ItemTurret, 'bawang', {})
+const bawang = extend(ItemTurret, 'bawang', {})//霸王
 bawang.ammoTypes.put(weijing1, Wweijing1);
 bawang.ammoTypes.put(weijing2, Wweijing2);
 bawang.ammoTypes.put(monengjing1, Wmonengjing);
