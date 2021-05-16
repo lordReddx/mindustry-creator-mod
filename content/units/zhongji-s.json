@@ -38,7 +38,7 @@
                 "width": 22,
                 "height": 30,
                 "speed": 4,
-                "damage": 1800,
+                "damage": 3000,
                 "ammoMultiplier": 3,
                 "hitSize": 8,
                 "lifetime": 80,
@@ -46,8 +46,9 @@
                 "shootEffect": "shootBig",
                 //"hitEffect": "hitFlameSmall",
                 //"despawnEffect": "none",
-                "lightning": 150, //闪电伤害
+                "lightning": 100, //闪电根数
                 "lightningLength": 7, //闪电长度
+                "lightningDamage" : 50,//闪电伤害
                 //"status": "burning",
                 "keepVelocity": false,
                 "backColor": "cbb0ff", //背景颜色
@@ -79,7 +80,7 @@
                     "ab57ff" ,"e2c5ff" ,"ffffff"
                 ],
                 "length": 460,
-                "damage": 560,
+                "damage": 3200,
                 "width": 75,
                 "despawnEffect": "none",
                 "lifetime": 65,
