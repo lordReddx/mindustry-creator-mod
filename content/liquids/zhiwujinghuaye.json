@@ -1,7 +1,7 @@
 {
    "alwaysUnlocked": true,
    // //"name": "植物精华液",//液氮
-   "type": "liquids",
+  // "type": "liquids",
    ////"description": ".",
    "flammability": 0, //可燃性
    "temperature": 0, //温度
