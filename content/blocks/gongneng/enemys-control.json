@@ -1,9 +1,9 @@
-{
+{"canOverdrive": false,//不可超速
     "health": 380,
     //"name": "魅惑护盾仪",
 	//"description": "接触护盾的敌人在瞬间变成友军，造价昂贵的同时且本身异常的脆弱，使用时需注意方法。关键时有奇效能救命",
     "size": 3,
-    "phaseRadiusBoost":40,//范围
+    "phaseRadiusBoost":400,//范围
     "solid": true,//碰撞
     "hasLiquids": false,
     "hasPower": true,
@@ -12,13 +12,15 @@
     "shieldHealth":100,//本体盾容
     "cooldownNormal":1,
 	"cooldownLiquid":1,
-    "radius":5,
+    "radius":64,
      "consumes": {
         "power":10.0 ,
-         "items": {
-             "items": [],
-             //"booster": true
-         }
+        "items": {
+            "items": [
+                
+               { "item":"chuangshiweichen","amount": 1 }
+               ]
+        }
      },
      "hasBoost":   false ,
     "requirements": [{ "item": "weijing1", "amount": 20 },
