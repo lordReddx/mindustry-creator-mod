@@ -102,7 +102,7 @@ jidianchi4.category = Category.power;
 lib.addToResearch(jidianchi4, { parent: GCC.jidianchi3.name, });
 exports.jidianchi4 = jidianchi4;
 
-const CuangDian = createBuildLimit(1);//创世电
+const CuangDian = createBuildLimit(3);//创世电
 const powerSource1 = extend(PowerSource, "power-source1", {
     canBreak(tile) { return false; },//不可拆
     canPlaceOn(tile, team) {
@@ -115,7 +115,7 @@ const powerSource1 = extend(PowerSource, "power-source1", {
         if (!Vars.world.tile(x, y)) { return; }
         if (!CuangDian.canBuild(Vars.player.team())) {
             this.drawPlaceText(
-                Core.bundle.format("message.creator.ABCD", 1),
+                Core.bundle.format("message.creator.ABCD", 3),
                 x, y, valid
             );
         }
@@ -129,7 +129,7 @@ powerSource1.breakable = true;
 powerSource1.laserRange = 0;
 powerSource1.alwaysUnlocked = true;
 powerSource1.maxNodes = 0;
-powerSource1.powerProduction = 99999999;
+powerSource1.powerProduction = 2199999999;
 powerSource1.requirements = ItemStack.with(
     chuangshizhixing, 1,
 );

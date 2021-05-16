@@ -974,7 +974,7 @@ const hunhe4 = extend(Wall, "92hunhe4", {});//魔微墙
 hunhe4.health = 14000;
 hunhe4.size = 4;
 hunhe4.buildCostMultiplier = 200;
-hunhe4.lightningChance = 0.1;
+hunhe4.lightningChance = 0.05;
 hunhe4.lightningLength = 40;
 hunhe4.requirements = ItemStack.with(
     monengjing1, 12,
@@ -984,6 +984,23 @@ hunhe4.buildVisibility = BuildVisibility.shown;
 hunhe4.category = Category.defense;
 lib.addToResearch(hunhe4, { parent: hunhe3.name, });
 exports.hunhe4 = hunhe4;
+//-----------------------------------------------------------
+const shenwei = extend(Wall, "shenwei", {});//神威城防
+shenwei.health = 50000//14000;
+shenwei.size = 5;
+shenwei.buildCostMultiplier = 900;
+shenwei.lightningChance = 0.15;
+shenwei.lightningLength = 40;
+shenwei.lightningColor =  Color.valueOf("ff0000");//闪电颜色
+shenwei.lightningDamage = 20;//闪电伤害
+shenwei.requirements = ItemStack.with(
+    monengjing3, 1,
+    weijing3, 5,
+);
+shenwei.buildVisibility = BuildVisibility.shown;
+shenwei.category = Category.defense;
+lib.addToResearch(shenwei, { parent: hunhe4.name, });
+exports.shenwei = shenwei;
 //-----------------------------------------------------------
 const qiang = extend(Wall, "qiang", {});//创世城防墙
 qiang.health = 1999999999;
@@ -1290,7 +1307,7 @@ juhechongji.size = 8;
 juhechongji.buildCostMultiplier = 5;
 juhechongji.itemCapacity = 50;
 juhechongji.liquidCapacity = 1000;
-juhechongji.itemDuration = 180;
+juhechongji.itemDuration = 420;
 juhechongji.warmupSpeed = 0.0003;
 juhechongji.powerProduction = 5833.333333333334;
 juhechongji.explosionRadius = 128;//爆炸半径 除以8
@@ -1301,9 +1318,9 @@ juhechongji.hasPower = true;
 juhechongji.consumes.power(366.66666667);
 juhechongji.ambientSound = Sounds.pulse;
 juhechongji.ambientSoundVolume = 0.15
-juhechongji.consumes.liquid(qiangxiaolengqueye, 0.4666666667);
+juhechongji.consumes.liquid(qiangxiaolengqueye, 0.1666666667);
 juhechongji.consumes.items(ItemStack.with(
-    juhebaozhawu, 3,
+    juhebaozhawu, 2,
 ));
 juhechongji.requirements = ItemStack.with(
     Items.copper, 7500,
@@ -1371,7 +1388,7 @@ yingzhizuantou.category = Category.production;
 lib.addToResearch(yingzhizuantou, { parent: Blocks.pneumaticDrill.name, });
 exports.yingzhizuantou = yingzhizuantou;
 //-----------------------------------------------------------
-const weijingzuantou1 = extend(Drill, "1weijingzuantou", {});
+const weijingzuantou1 = extend(Drill, "1weijingzuantou", {});//初级钻头
 weijingzuantou1.health = 600;
 weijingzuantou1.size = 4;
 weijingzuantou1.tier = 7;
@@ -1397,7 +1414,7 @@ weijingzuantou1.category = Category.production;
 lib.addToResearch(weijingzuantou1, { parent: Blocks.blastDrill.name, });
 exports.weijingzuantou1 = weijingzuantou1;
 //-----------------------------------------------------------
-const weijingzuantou2 = extend(Drill, "2weijingzuantou", {});
+const weijingzuantou2 = extend(Drill, "2weijingzuantou", {});//高级钻头
 weijingzuantou2.health = 800;
 weijingzuantou2.size = 3;
 weijingzuantou2.tier = 9;
@@ -1409,7 +1426,7 @@ weijingzuantou2.hasShadow = true;
 weijingzuantou2.liquidCapacity = 15;
 weijingzuantou2.drawMineItem = true;
 weijingzuantou2.consumes.power(20);
-weijingzuantou2.consumes.liquid(molijinghuaye, 0.1);
+weijingzuantou2.consumes.liquid(molijinghuaye, 0.033333333);
 weijingzuantou2.requirements = ItemStack.with(
     Items.copper, 265,
     Items.lead, 265,
@@ -1454,7 +1471,7 @@ junengzuantou.category = Category.production;
 lib.addToResearch(junengzuantou, { parent: weijingzuantou2.name, });
 exports.junengzuantou = junengzuantou;
 //-----------------------------------------------------------
-const zuantou = extend(Drill, "zuantou", {});//4级微晶钻头
+const zuantou = extend(Drill, "zuantou", {});//4级微晶-微晶钻头
 zuantou.health = 1800;
 zuantou.size = 1;
 zuantou.buildCostMultiplier = 20;
@@ -1483,7 +1500,7 @@ zuantou.category = Category.production;
 lib.addToResearch(zuantou, { parent: junengzuantou.name, });
 exports.zuantou = zuantou;
 //---------------------------------------------------------------------------
-const weijingzuantou3 = extend(Drill, "3weijingzuantou", {});
+const weijingzuantou3 = extend(Drill, "3weijingzuantou", {});//超级微晶钻头
 weijingzuantou3.health = 1200;
 weijingzuantou3.size = 3;
 weijingzuantou3.tier = 10;
@@ -1496,7 +1513,7 @@ weijingzuantou3.drillEffect = Fx.hitBulletSmall;
 weijingzuantou3.hasShadow = true;
 weijingzuantou3.drawMineItem = true;
 weijingzuantou3.consumes.power(50);
-weijingzuantou3.consumes.liquid(qiangxiaolengqueye, 0.1), true;
+weijingzuantou3.consumes.liquid(qiangxiaolengqueye, 0.025), true;
 weijingzuantou3.requirements = ItemStack.with(
     Items.copper, 265,
     Items.lead, 265,
@@ -1511,7 +1528,7 @@ weijingzuantou3.category = Category.production;
 lib.addToResearch(weijingzuantou3, { parent: junengzuantou.name, });
 exports.weijingzuantou3 = weijingzuantou3;
 //-----------------------------------------------------------
-const shiyou = extend(Fracker, "shiyou", {});
+const shiyou = extend(Fracker, "shiyou", {});//石油钻井
 shiyou.health = 600;
 shiyou.size = 3;
 shiyou.buildCostMultiplier = 0.5;
@@ -1523,7 +1540,7 @@ shiyou.rotateSpeed = 6;
 shiyou.coolEffect = Fx.steam;
 shiyou.warmupSpeed = 0.21;
 shiyou.craftTime = 90;
-shiyou.liquidCapacity = 10;
+shiyou.liquidCapacity = 200;
 shiyou.consumes.power(7);
 shiyou.consumes.liquid(Liquids.water, 3);
 shiyou.consumes.item(Items.sand, 3);
@@ -1674,7 +1691,7 @@ jitilianjimoliyetilianji.category = Category.crafting;
 lib.addToResearch(jitilianjimoliyetilianji, { parent: Blocks.disassembler.name, });
 exports.jitilianjimoliyetilianji = jitilianjimoliyetilianji;
 //-----------------------------------------------------------
-const jitilianji4 = extend(Separator, "4jitilianji", {});
+const jitilianji4 = extend(Separator, "4jitilianji", {});//4级提炼机
 jitilianji4.health = 700;
 jitilianji4.size = 5;
 jitilianji4.craftTime = 3;
@@ -1684,11 +1701,11 @@ jitilianji4.consumes.power(5.2);
 jitilianji4.consumes.item(Items.scrap);
 jitilianji4.consumes.liquid(Liquids.slag, 0.7);
 jitilianji4.results = ItemStack.with(
-    zuanjing, 60,
-    weijing1, 30,
-    guijingti, 80,
-    molizhi, 40,
-    luzha, 100,
+    zuanjing, 40,
+    weijing1, 60,
+    guijingti, 20,
+    molizhi, 30,
+    luzha, 90,
 );;
 jitilianji4.requirements = ItemStack.with(
     Items.titanium, 450,
@@ -2139,7 +2156,7 @@ jiweijinggongchang3.craftEffect = Fx.fireballsmoke;
 jiweijinggongchang3.updateEffect = Fx.mine;
 jiweijinggongchang3.updateEffectChance = 0.1
 jiweijinggongchang3.consumes.power(6);
-jiweijinggongchang3.consumes.liquid(molijinghuaye, 0.2);
+jiweijinggongchang3.consumes.liquid(molijinghuaye, 0.05);
 jiweijinggongchang3.consumes.items(new ItemStack.with(
     zuanjing, 160,
     weijing2, 50,
@@ -2179,7 +2196,7 @@ jiweijinggongchang4.consumes.items(new ItemStack.with(
     Items.surgeAlloy, 560,
     zuanjing, 520,
     monengjing1, 60,
-    weijing3, 85,
+    weijing3, 50,
     jin, 650,
     xi, 700,
     molizhi, 220,
@@ -2195,7 +2212,7 @@ jiweijinggongchang4.requirements = ItemStack.with(
     Items.titanium, 800,
     molishi, 700,
     weijing2, 500,
-    weijing3, 330,
+    weijing3, 120,
     zuanjing, 200,
 );
 jiweijinggongchang4.buildVisibility = BuildVisibility.shown;
@@ -2217,7 +2234,7 @@ jiweijinggongchang5.craftEffect = Fx.fireballsmoke;
 jiweijinggongchang5.updateEffect = Fx.spawnShockwave;
 jiweijinggongchang5.updateEffectChance = 0.1
 jiweijinggongchang5.consumes.power(3000);
-jiweijinggongchang5.consumes.liquid(qiangxiaolengqueye, 0.46666667);
+jiweijinggongchang5.consumes.liquid(qiangxiaolengqueye, 0.16666667);
 jiweijinggongchang5.consumes.items(new ItemStack.with(
     monengjing2, 3,
     buding, 220,
@@ -2677,7 +2694,7 @@ tanbanyasuoji.consumes.item(
     Items.coal, 50,
 );
 tanbanyasuoji.outputItem = new ItemStack(
-    tanban, 1,
+    tanban, 2,
 );
 tanbanyasuoji.requirements = ItemStack.with(
     Items.copper, 20,
@@ -2703,7 +2720,7 @@ zuanjingjiagongchang.updateEffect = Fx.smoke;
 zuanjingjiagongchang.consumes.liquid(moliye, 0.02);
 zuanjingjiagongchang.consumes.power(2.8);
 zuanjingjiagongchang.consumes.item(
-    tanban, 3,
+    tanban, 5,
 );
 zuanjingjiagongchang.outputItem = new ItemStack(
     zuanjing, 1,
@@ -2732,7 +2749,7 @@ tanbanyasuoji2.consumes.item(
     Items.coal, 50,
 );
 tanbanyasuoji2.outputItem = new ItemStack(
-    tanban, 3,
+    tanban, 5,
 );
 tanbanyasuoji2.requirements = ItemStack.with(
     Items.copper, 20,
@@ -2936,7 +2953,7 @@ jimonengjinglianzhiqi4.hasPower = true;
 jimonengjinglianzhiqi4.hasItems = true;
 jimonengjinglianzhiqi4.buildCostMultiplier = 0.2;
 jimonengjinglianzhiqi4.itemCapacity = 10;
-jimonengjinglianzhiqi4.craftTime = 30;
+jimonengjinglianzhiqi4.craftTime = 50;
 jimonengjinglianzhiqi4.updateEffect = Fx.steam;
 jimonengjinglianzhiqi4.consumes.power(12.5);
 jimonengjinglianzhiqi4.consumes.items(new ItemStack.with(
@@ -3030,10 +3047,10 @@ xiaofentilianji.updateEffect = Fx.steam;
 xiaofentilianji.consumes.power(1.2);
 xiaofentilianji.consumes.liquid(moliye, 0.01);
 xiaofentilianji.consumes.item(
-    Items.thorium, 1
+    Items.thorium, 3
 );
 xiaofentilianji.outputItem = new ItemStack(
-    xiao, 2,
+    xiao, 1,
 );
 xiaofentilianji.requirements = ItemStack.with(
     Items.copper, 90,
@@ -3060,7 +3077,7 @@ zhayaozhizaoji.consumes.power(2);
 zhayaozhizaoji.consumes.items(new ItemStack.with(
     tanban, 2,
     Items.pyratite, 2,
-    xiao, 4)
+    xiao, 1)
 );
 zhayaozhizaoji.outputItem = new ItemStack(
     zhayao, 1,

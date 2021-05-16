@@ -3,6 +3,7 @@ require('v6');
 require('wupin');
 require('core');
 require('enemys-control');
+require('enemys-control2');
 require('fanjiasu1');
 require('fanjiasu2');
 require('next-wave');
