@@ -705,7 +705,7 @@ WmonengjingA.trailEffect = Fx.none;
 WmonengjingA.homingRange = 40000;
 WmonengjingA.homingPower = 2;
 WmonengjingA.lifetime = 1000;
-WmonengjingA.speed = 1.3;
+WmonengjingA.speed = 1.7;
 WmonengjingA.hitEffect = Fx.flakExplosion
 //WmonengjingA.collidesTiles = false;
 //WmonengjingA.collidesTeam = false;
@@ -749,12 +749,64 @@ Wmonengjing2.shootEffect = Fx.shootSmall;
 Wmonengjing2.fragBullets = 4;
 Wmonengjing2.fragBullet = dafengche;
 
+//const shangdilizizidan = require('shangdilizizidan');
+/* var FxL = new Effect(40, e => {
+    Draw.color(Color.valueOf("a775f6"));
+    Angles.randLenVectors(e.id, 2, 1 + e.fin() * 2, (x, y) => {
+        Fill.circle(e.x + x, e.y + y, e.fout() * 1.2);
+    });
+});
+ */
+var effectL = new StatusEffect("ZT3");
+effectL.color = Color.valueOf("ffffff");
+effectL.damage = 1.6666667
+effectL.reloadMultiplier = 0;//射击速度
+//effectL.effect = FxL;
+effectL.effect = Fx.bubble;
+
+var shangdilizi2 = new JavaAdapter(MissileBulletType, {});
+//shangdilizi2.splashDamageRadius = 25;
+//shangdilizi2.splashDamage = 15;
+shangdilizi2.width = 12;
+shangdilizi2.damage = 40;//15
+shangdilizi2.height = 20;
+shangdilizi2.trailEffect = Fx.none;
+shangdilizi2.lifetime = 200;
+shangdilizi2.speed = 6;
+shangdilizi2.backColor = Color.valueOf("f6fe76"); //背景颜色
+shangdilizi2.frontColor = Color.valueOf("7936f4"); //前面颜色
+shangdilizi2.status = effectL; //效果
+shangdilizi2.statusDuration = 480//效果时间8秒
+shangdilizi2.hitEffect = Fx.flakExplosion
+shangdilizi2.pierce = true;
+shangdilizi2.pierceCap = 6;
+
+var shangdilizi1 = new JavaAdapter(BasicBulletType, {});
+shangdilizi1.damage = 900; //伤害300
+shangdilizi1.width = 20; //宽
+shangdilizi1.height = 30; //高
+shangdilizi1.speed = 6;
+shangdilizi1.homingRange = 2000;
+shangdilizi1.homingPower = 5;
+shangdilizi1.lifetime = 80; //子弹最远距离
+shangdilizi1.hitEffect = Fx.plasticExplosion;
+shangdilizi1.backColor = Color.valueOf("f6fe76"); //背景颜色
+shangdilizi1.frontColor = Color.valueOf("7936f4"); //前面颜色
+shangdilizi1.reloadMultiplier = 0.02; //装弹速度0.15
+shangdilizi1.ammoMultiplier = 30; //装弹数量
+shangdilizi1.status = effectL; //效果:定身
+shangdilizi1.statusDuration = 30
+shangdilizi1.fragBullets = 50;
+shangdilizi1.fragBullet = shangdilizi2;
+
 
 const bawang = extend(ItemTurret, 'bawang', {})//霸王
 bawang.ammoTypes.put(weijing1, Wweijing1);
 bawang.ammoTypes.put(weijing2, Wweijing2);
 bawang.ammoTypes.put(monengjing1, Wmonengjing);
 bawang.ammoTypes.put(monengjing2, Wmonengjing2);
+bawang.ammoTypes.put(chuangshilizi, shangdilizi1);
+//bawang.itemCapacity = 50;
 bawang.health = 2100;
 bawang.inaccuracy = 8; //精准
 bawang.size = 4;
@@ -780,37 +832,6 @@ bawang.buildVisibility = BuildVisibility.shown;
 bawang.category = Category.turret;
 lib.addToResearch(bawang, { parent: Blocks.ripple.name, });
 exports.bawang = bawang;
-/* const LiZiYePao = new JavaAdapter(LiquidTurret, {}, 'LiZiYePao');//离子液炮
-LiZiYePao.recoilAmount = 2;
-LiZiYePao.liquidCapacity = 10;
-LiZiYePao.buildVisibility = BuildVisibility.shown;
-LiZiYePao.category = Category.turret;
-LiZiYePao.health = 3000;
-LiZiYePao.size = 4;
-LiZiYePao.reloadTime = 60;
-LiZiYePao.range = 220;
-LiZiYePao.inaccuracy = 2;
-LiZiYePao.shots = 10;
-LiZiYePao.rotateSpeed = 8;
-LiZiYePao.shootEffect = Fx.shootLiquid;
-LiZiYePao.burstSpacing = 6;
-LiZiYePao.xRand = 0;
-LiZiYePao.shootSound = Sounds.spray;
-LiZiYePao.loopSound = Sounds.none;
-LiZiYePao.requirements = ItemStack.with(
-    Items.surgeAlloy, 600,
-    Items.lead, 1600,
-    Items.graphite, 800,
-    Items.plastanium, 1200,
-    monengjing1, 600,
-    weijing2, 160,
-    shimoxi, 700
-);
-LiZiYePao.ammo(liziye, newIonBoltBulletType({
-    ammoMultiplier: 1,
-    damage: 13,//
-    shootEffect : Fx.shootLiquid,
-})); */
 
 Blocks.tsunami.ammoTypes.put(liziye, (() => {
     const v = newIonBoltBulletType(liziye);
@@ -827,46 +848,6 @@ Blocks.tsunami.ammoTypes.put(liziye, (() => {
     //v.statusDuration = 30
     return v;
 })());  
-
-/* const shuipao = new JavaAdapter(LiquidTurret, {}, 'shuipao');
-shuipao.recoilAmount = 2;
-shuipao.liquidCapacity = 50;
-shuipao.health = 3500;
-shuipao.size = 3;
-shuipao.reloadTime = 2;
-shuipao.range = 240;
-shuipao.inaccuracy = 8;
-shuipao.shots = 2;
-//shuipao.rotateSpeed = 8;
-//shuipao.burstSpacing = 6;
-//shuipao.xRand = 0;
-shuipao.despawnEffect = Fx.none;
-shuipao.hitEffect = Fx.hitLiquid;
-shuipao.smokeEffect = Fx.none;
-shuipao.shootSound =  Sounds.spray;
-shuipao.loopSound = Sounds.none;
-shuipao.requirements = ItemStack.with(
-    Items.lead, 1200,
-    Items.metaglass, 200,
-    Items.graphite, 75,
-    Items.plastanium, 120,
-    Items.surgeAlloy, 250,
-    weijing2, 90,
-    weijing3, 20,
-);
-shuipao.ammo(Liquids.water, LiquidBulletType({
-    knockback : 0.7,
-    drag : 0.01,
-    puddles:2,
-    puddleRange:8,
-    puddleAmount:10,
-    puddleLiquid:Liquids.water,
-}));
-shuipao.buildVisibility = BuildVisibility.shown;
-shuipao.category = Category.turret;
-lib.addToResearch(shuipao, { parent: Blocks.tsunami.name, });
-exports.shuipao = shuipao;
- */
 
 
 
