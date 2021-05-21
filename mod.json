@@ -3,6 +3,23 @@
   "displayName": "创世神-creator",
   "author": "[pink]编[cyan]号[red]95[violet]27",
   "description": "
+
+  郑重声明：
+已经更新2.0，国内用户请在QQ群中下载
+群1：316035230。群1如果进不去可以去群2
+群2：316035230
+MOD文件数太多，创意工坊已经无法上传
+工坊版本可能永远停留在1.026了
+
+这个MOD已经更新到2.0版本了
+创意工坊由于特殊原因已经无法更新
+请到github下载安装
+https://github.com/guiYMOUR/mindustry-creator-mod
+另外，代码源已经上传到github。在游戏mod界面输入它直接导入：
+guiYMOUR/mindustry-creator-mod
+
+
+
   Newly added content:
 
   Resources: 36
@@ -17,7 +34,7 @@
   Map: 40
   Planets: 11
   If you like this module, please click thumbs on this page *⸜(^_^)⸝*
-  Subsequent will update more if you have Suggestions or comments please go to the QQ group 200951753 and discussion of the author.
+  Subsequent will update more if you have Suggestions or comments please go to the QQ group 316035230 and discussion of the author.
   Or send email to cyj674971336@163.com
   新增加的内容:
   
@@ -34,9 +51,9 @@
   行星：11
   
   如果您觉得此模组不错，请对本模组点赞*⸜(^_^)⸝*
-  如果你有建议或者意见请到QQ群200951753与作者讨论。或者发送邮件至cyj674971336@163.com
+  如果你有建议或者意见请到QQ群316035230与作者讨论。或者发送邮件至cyj674971336@163.com
   —————————————————————————创世神-creator",
-  "version": "2.06",
+  "version": "2.08",
   "minGameVersion": 125,
   "hidden": false //true//辅助性质
 }
