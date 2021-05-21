@@ -1,0 +1,18 @@
+{
+    //name:液体解包机
+   
+	"health":360 ,
+	size:2
+updateEffect: "steam",
+		//craftEffect: "fireballsmoke",
+	//buildCostMultiplier: 0.5,
+	requirements:[
+		xi/240
+		weijing1/5
+        jin/300
+		titanium/120
+		graphite/250
+	]
+	category:crafting
+	research:yeti1
+}
