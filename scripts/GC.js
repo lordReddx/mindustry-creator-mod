@@ -3,6 +3,7 @@ const lib = require('lib');
 const guanbi = new Color.valueOf("ffffff");
 const kaiqi = new Color.valueOf("2c2c2c");
 const heDian = lib.loadSound("shuiDi");
+const zhiqu = lib.loadSound("shootBigg");
 //----
 const {newIonBoltBulletType} = require('paota/index');
 //----
@@ -14,7 +15,8 @@ const {
     buding, chuangshilizi, chuangshishenhun, chuangshiweichen,
     chuangshizhixing, jin, jinfen, molizhi, shimoxi, shiying,
     yuanshencanpian, zhayao, zijing1, zzjinbi, invalid,
-    molijinghuaye, moliye, qiangxiaolengqueye, zhiwujinghuaye
+    molijinghuaye, moliye, qiangxiaolengqueye, zhiwujinghuaye,
+    dabaoshui,dabaoleng,dabaoshiyou,dabaomoli,dabaozhiwu,dabaojingmoli,dabaoyedan
 } = items;
 
 Blocks.snowBoulder.variants=5
@@ -604,10 +606,12 @@ weixingzhiqu.range = 240;
 weixingzhiqu.rotateSpeed = 0.05;
 weixingzhiqu.translation = 10;
 weixingzhiqu.minDistribute = 10;
-weixingzhiqu.knockback = 6;
+weixingzhiqu.knockback = 2;
 weixingzhiqu.reloadTime = 50;
 weixingzhiqu.shake = 10;
-weixingzhiqu.shootEffect = Fx.shootBig2;
+weixingzhiqu.shootEffect = Fx.steam;
+weixingzhiqu.shootSound = zhiqu;
+weixingzhiqu.smokeEffect = Fx.none;
 weixingzhiqu.consumes.power(1);
 weixingzhiqu.requirements = ItemStack.with(
     Items.lead, 80,
@@ -622,7 +626,7 @@ lib.addToResearch(weixingzhiqu, { parent: Blocks.massDriver.name, });
 exports.weixingzhiqu = weixingzhiqu;
 //-----------------------------------------------------------
 const zhiqu2 = extend(MassDriver, "2jizhiqu", {});//2级质驱
-zhiqu2.health = 500;
+zhiqu2.health = 700;
 zhiqu2.size = 4;
 zhiqu2.itemCapacity = 350;
 zhiqu2.range = 672;
@@ -649,12 +653,13 @@ lib.addToResearch(zhiqu2, { parent: Blocks.massDriver.name, });
 exports.zhiqu2 = zhiqu2;
 //-----------------------------------------------------------
 const zhiqu3 = extend(MassDriver, "3jizhiqu", {});//3级质驱
-zhiqu3.health = 750;
+zhiqu3.health = 2500;
 zhiqu3.size = 5;
-zhiqu3.itemCapacity = 750;
-zhiqu3.range = 1200;
+zhiqu3.itemCapacity = 1200;
+zhiqu3.range = 2500;
+zhiqu3.bulletLifetime=1000//子弹寿命
 zhiqu3.rotateSpeed = 0.1;//射击速度
-zhiqu3.translation = 999999999;//子弹偏移
+//zhiqu3.translation = 999999999;//子弹偏移
 zhiqu3.minDistribute = 250;//最低发射量
 zhiqu3.knockback = 8;
 zhiqu3.reloadTime = 120;
@@ -1477,7 +1482,7 @@ zuantou.size = 1;
 zuantou.buildCostMultiplier = 20;
 zuantou.tier = 50;
 zuantou.drillTime = 4000;
-zuantou.liquidBoostIntensity = 1;
+zuantou.liquidBoostIntensity = 2.5;
 zuantou.hardnessDrillMultiplier = 0;
 zuantou.warmupSpeed = 0.01;
 zuantou.drawMineItem = false;
@@ -1701,11 +1706,11 @@ jitilianji4.consumes.power(5.2);
 jitilianji4.consumes.item(Items.scrap);
 jitilianji4.consumes.liquid(Liquids.slag, 0.7);
 jitilianji4.results = ItemStack.with(
-    zuanjing, 40,
-    weijing1, 60,
-    guijingti, 20,
-    molizhi, 30,
-    luzha, 90,
+    zuanjing, 35,
+    weijing1, 45,
+    guijingti, 40,
+    molizhi, 25,
+    luzha, 70,
 );;
 jitilianji4.requirements = ItemStack.with(
     Items.titanium, 450,
@@ -1743,6 +1748,29 @@ chujishiyingronglu.buildVisibility = BuildVisibility.shown;
 chujishiyingronglu.category = Category.crafting;
 lib.addToResearch(chujishiyingronglu, { parent: Blocks.graphitePress.name, });
 exports.chujishiyingronglu = chujishiyingronglu;
+//-----------------------------------------------------------
+const incinerator2 = extend(Incinerator, "incinerator2", {});
+incinerator2.health = 90;//资源焚化炉,
+incinerator2.size = 1;
+incinerator2.hasPower = true;
+incinerator2.hasItems = true;
+incinerator2.hasLiquids = false;
+incinerator2.update = true;
+incinerator2.solid = true;
+incinerator2.effect = Fx.fuelburn;
+incinerator2.flameColor = Color.valueOf("ffad9d");
+incinerator2.consumes.power(0.5);
+
+incinerator2.requirements = ItemStack.with(
+    shiying, 15,
+    Items.silicon, 5,
+    Items.graphite, 10,
+    Items.lead, 30,
+);
+incinerator2.buildVisibility = BuildVisibility.shown;
+incinerator2.category = Category.crafting;
+lib.addToResearch(incinerator2, { parent: Blocks.incinerator.name, });
+exports.incinerator2 = incinerator2;
 //-----------------------------------------------------------
 const shiyingronglu = extend(GenericSmelter, "b-shiyingronglu", {});
 shiyingronglu.health = 150;//石英熔炉
@@ -2331,7 +2359,7 @@ liziduizhuangji.hasPower = true;
 liziduizhuangji.hasItems = true;;
 liziduizhuangji.buildCostMultiplier = 30;
 liziduizhuangji.itemCapacity = 3000;
-liziduizhuangji.craftTime = 18000;
+liziduizhuangji.craftTime = 10800;
 liziduizhuangji.updateEffect = Fx.bubble;
 liziduizhuangji.updateEffectChance = 0.5;
 liziduizhuangji.consumes.power(13333.333333);
@@ -3136,13 +3164,13 @@ qianghuaronglu.hasLiquids = true;
 qianghuaronglu.updateEffect = Fx.steam;
 qianghuaronglu.itemCapacity = 10;
 qianghuaronglu.liquidCapacity = 100;
-qianghuaronglu.craftTime = 5;
+qianghuaronglu.craftTime = 20;
 qianghuaronglu.consumes.power(7);
 qianghuaronglu.consumes.items(new ItemStack.with(
     Items.scrap, 3,
 ));
 qianghuaronglu.outputLiquid = LiquidStack(
-    Liquids.slag, 2
+    Liquids.slag, 12
 );
 qianghuaronglu.requirements = ItemStack.with(
     Items.surgeAlloy, 35,
@@ -3305,7 +3333,7 @@ chuangshiji.updateEffect = Fx.steam;
 chuangshiji.updateEffectChance = 0.5;
 chuangshiji.consumes.power(33333.333995);
 chuangshiji.consumes.item(
-    chuangshilizi, 100,
+    chuangshilizi, 50,
 );
 chuangshiji.outputItem = new ItemStack(
     chuangshizhixing, 1,

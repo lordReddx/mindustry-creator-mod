@@ -225,7 +225,7 @@ Events.on(ContentInitEvent, cons(e => {
         )
     });
 }));
-const GTwoMaps11 = new SectorPreset("GTwoCT11", GTwo, 11);
+const GTwoMaps11 = new SectorPreset("GTwoCTu11", GTwo, 11);
 GTwoMaps11.captureWave = 220;
 GTwoMaps11.difficulty = 8;
 GTwoMaps11.localizedName = Core.bundle.format("planet.creator.ctf");//冲突

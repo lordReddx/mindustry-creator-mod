@@ -63,7 +63,7 @@
  *
  * @author 滞人<abomb4@163.com> 2020-11-21
  */
- exports.defineMultiCrafter = function (originConfig) {
+exports.defineMultiCrafter = function (originConfig) {
 
     /**
      * 1 - (1 - ratio) ^ count
@@ -305,7 +305,7 @@
 
         function getProgressEfficiency(entity) {
             return (plan.consume.power <= 0 ? entity.delta() : entity.edelta())
-                    * getAttributeEfficiency(entity) * getMultiPlanEfficiencyAffect(entity);
+                * getAttributeEfficiency(entity) * getMultiPlanEfficiencyAffect(entity);
         }
 
         /** Power producing efficiency, Not affected by multiplan efficiency */
@@ -559,7 +559,7 @@
             if (this.hasItems && this.itemCapacity > 0) this.stats.add(Stat.itemCapacity, this.itemCapacity, StatUnit.items);
 
             this.stats.add(Stat.output, new JavaAdapter(StatValue, {
-                display: (table) => { 
+                display: (table) => {
                     for (var plan of config.plans) {
                         ((plan) => {
                             table.row();
@@ -958,8 +958,18 @@ defineMultiCrafter({
 });
 */
 
-const AX = require('wupin');
-
+const items = require('wupin');
+const {
+    xi, zuanshikuang, zuanjing, hua1, hua2, hua3, tanban,
+    zhiwumo, luzha, weijing1, weijing2, xiao, liziye, juhebaozhawu,
+    weijing3, weijing4, weijing5, guijingti, molishi,
+    monengjing, monengjing1, monengjing2, monengjing3,
+    buding, chuangshilizi, chuangshishenhun, chuangshiweichen,
+    chuangshizhixing, jin, jinfen, molizhi, shimoxi, shiying,
+    yuanshencanpian, zhayao, zijing1, zzjinbi, invalid,
+    molijinghuaye, moliye, qiangxiaolengqueye, zhiwujinghuaye,
+    dabaoshui, dabaoleng, dabaoshiyou, dabaomoli, dabaozhiwu, dabaojingmoli, dabaoyedan
+} = items;
 exports.defineMultiCrafter({//锡机
     name: 'xitilianji',
     noParallelAffect: false,
@@ -979,7 +989,7 @@ exports.defineMultiCrafter({//锡机
             },
             output: {
                 items: [
-                    { item: AX.xi, amount: 1 },
+                    { item: xi, amount: 1 },
                     { item: Items.scrap, amount: 3 },
                 ]
             },
@@ -1002,7 +1012,7 @@ exports.defineMultiCrafter({//钻矿加工厂
             consume: {
                 power: 1,
                 items: [
-                    { item: AX.zuanshikuang, amount: 2 },
+                    { item: zuanshikuang, amount: 2 },
                 ],
                 liquids: [
                     { liquid: Liquids.cryofluid, amount: 3.9 }
@@ -1010,7 +1020,7 @@ exports.defineMultiCrafter({//钻矿加工厂
             },
             output: {
                 items: [
-                    { item: AX.zuanjing, amount: 1 },
+                    { item: zuanjing, amount: 1 },
                     { item: Items.scrap, amount: 3 },
                 ]
             },
@@ -1032,7 +1042,7 @@ exports.defineMultiCrafter({//高级煤炭机
             consume: {
                 power: 1.3,
                 items: [
-                    { item: AX.hua1, amount: 2 },
+                    { item: hua1, amount: 2 },
                 ]
             },
             output: {
@@ -1048,7 +1058,7 @@ exports.defineMultiCrafter({//高级煤炭机
             consume: {
                 power: 1.3,
                 items: [
-                    { item: AX.hua2, amount: 2 },
+                    { item: hua2, amount: 2 },
                 ]
             },
             output: {
@@ -1064,7 +1074,7 @@ exports.defineMultiCrafter({//高级煤炭机
             consume: {
                 power: 1.3,
                 items: [
-                    { item: AX.hua3, amount: 2 },
+                    { item: hua3, amount: 2 },
                 ]
             },
             output: {
@@ -1108,13 +1118,13 @@ exports.defineMultiCrafter({//植物捣碎
             consume: {
                 power: 0.5,
                 items: [
-                    { item: AX.hua1, amount: 5 },
+                    { item: hua1, amount: 5 },
                 ]
             },
             output: {
                 items: [
 
-                    { item: AX.zhiwumo, amount: 2 },
+                    { item: zhiwumo, amount: 2 },
                 ]
             },
             craftEffect: Fx.steam,
@@ -1124,13 +1134,13 @@ exports.defineMultiCrafter({//植物捣碎
             consume: {
                 power: 0.5,
                 items: [
-                    { item: AX.hua2, amount: 5 },
+                    { item: hua2, amount: 5 },
                 ]
             },
             output: {
                 items: [
 
-                    { item: AX.zhiwumo, amount: 2 },
+                    { item: zhiwumo, amount: 2 },
                 ]
             },
             craftEffect: Fx.none,
@@ -1140,13 +1150,13 @@ exports.defineMultiCrafter({//植物捣碎
             consume: {
                 power: 0.5,
                 items: [
-                    { item: AX.hua3, amount: 5 },
+                    { item: hua3, amount: 5 },
                 ]
             },
             output: {
                 items: [
 
-                    { item: AX.zhiwumo, amount: 2 },
+                    { item: zhiwumo, amount: 2 },
                 ]
             },
             craftEffect: Fx.none,
@@ -1162,7 +1172,7 @@ exports.defineMultiCrafter({//植物捣碎
             output: {
                 items: [
 
-                    { item: AX.zhiwumo, amount: 1 },
+                    { item: zhiwumo, amount: 1 },
                 ]
             },
             craftEffect: Fx.none,
@@ -1184,12 +1194,12 @@ exports.defineMultiCrafter({//制沙机
             consume: {
                 power: 1,
                 items: [
-                    { item: AX.luzha, amount: 5 },
+                    { item: luzha, amount: 5 },
                 ]
             },
             output: {
                 items: [
-                 
+
                     { item: Items.sand, amount: 14 },
                 ]
             },
@@ -1205,7 +1215,7 @@ exports.defineMultiCrafter({//制沙机
             },
             output: {
                 items: [
-                 
+
                     { item: Items.sand, amount: 8 },
                 ]
             },
@@ -1219,7 +1229,7 @@ exports.defineMultiCrafter({//制沙机
             },
             output: {
                 items: [
-                 
+
                     { item: Items.sand, amount: 3 },
                 ]
             },
@@ -1228,7 +1238,7 @@ exports.defineMultiCrafter({//制沙机
         },
     ]
 });
- exports.defineMultiCrafter({
+exports.defineMultiCrafter({
     name: 'liuji',
     noParallelAffect: true,//false,
     itemCapacity: 20,
@@ -1260,7 +1270,7 @@ exports.defineMultiCrafter({//制沙机
             consume: {
                 power: 0.5,
                 items: [
-                    { item: AX.xiao, amount: 1 },
+                    { item: xiao, amount: 1 },
                     { item: Items.coal, amount: 2 },
                 ]
             },
@@ -1275,3 +1285,290 @@ exports.defineMultiCrafter({//制沙机
         },
     ]
 });
+exports.defineMultiCrafter({
+    name: 'yeti1',//液体打包
+    noParallelAffect: false,//false,
+    itemCapacity: 20,
+    liquidCapacity: 200,
+    updateEffectChance: 0.05,
+    updateEffect: Fx.steam,
+    ambientSound: Sounds.machine,
+    ambientSoundVolume: 0.5,
+    plans: [
+        {
+            consume: {
+                power: 1,
+                items: [
+                    { item: xi, amount: 5 },
+                ],
+                liquids: [
+                    { liquid: Liquids.water, amount: 100 }
+                ]
+            },
+            output: {
+                items: [
+
+                    { item: dabaoshui, amount: 1 },
+                ]
+            },
+            craftEffect: Fx.steam,
+            craftTime: 180,
+        },
+        {
+            consume: {
+                power: 1,
+                items: [
+                    { item: xi, amount: 5 },
+                ],
+                liquids: [
+                    { liquid: Liquids.oil, amount: 100 }
+                ]
+            },
+            output: {
+                items: [
+
+                    { item: dabaoshiyou, amount: 1 },
+                ]
+            },
+            craftEffect: Fx.steam,
+            craftTime: 180,
+        },
+        {
+            consume: {
+                power: 1,
+                items: [
+                    { item: xi, amount: 5 },
+                ],
+                liquids: [
+                    { liquid: Liquids.cryofluid, amount: 100 }
+                ]
+            },
+            output: {
+                items: [
+
+                    { item: dabaoleng, amount: 1 },
+                ]
+            },
+            craftEffect: Fx.steam,
+            craftTime: 180,
+        },
+        {
+            consume: {
+                power: 1,
+                items: [
+                    { item: xi, amount: 5 },
+                ],
+                liquids: [
+                    { liquid: moliye, amount: 100 }
+                ]
+            },
+            output: {
+                items: [
+
+                    { item: dabaomoli, amount: 1 },
+                ]
+            },
+            craftEffect: Fx.steam,
+            craftTime: 180,
+        },
+        {
+            consume: {
+                power: 1.5,
+                items: [
+                    { item: xi, amount: 5 },
+                ],
+                liquids: [
+                    { liquid: zhiwujinghuaye, amount: 100 }
+                ]
+            },
+            output: {
+                items: [
+
+                    { item: dabaozhiwu, amount: 1 },
+                ]
+            },
+            craftEffect: Fx.steam,
+            craftTime: 180,
+        },
+        {
+            consume: {
+                power: 3,
+                items: [
+                    { item: xi, amount: 5 },
+                ],
+                liquids: [
+                    { liquid: molijinghuaye, amount: 100 }
+                ]
+            },
+            output: {
+                items: [
+                    { item: dabaojingmoli, amount: 1 },
+                ]
+            },
+            craftEffect: Fx.steam,
+            craftTime: 300,
+        },
+        {
+            consume: {
+                power: 5,
+                items: [
+                    { item: xi, amount: 10 },
+                ],
+                liquids: [
+                    { liquid: qiangxiaolengqueye, amount: 100 }
+                ]
+            },
+            output: {
+                items: [
+
+                    { item: dabaoyedan, amount: 1 },
+                ]
+            },
+            craftEffect: Fx.steam,
+            craftTime: 420,
+        },
+    ]
+});
+exports.defineMultiCrafter({
+    name: 'yeti2',//液体解包
+    noParallelAffect: false,//false,
+    itemCapacity: 20,
+    liquidCapacity: 200,
+    updateEffectChance: 0.05,
+    updateEffect: Fx.steam,
+    ambientSound: Sounds.machine,
+    ambientSoundVolume: 0.5,
+    plans: [
+        {
+            consume: {
+                power: 1,
+                items: [
+                    { item: dabaoshui, amount: 1 },
+                ]
+            },
+            output: {
+                items: [
+                    { item: xi, amount: 1 },
+                ],
+                liquids: [
+                    { liquid: Liquids.water, amount: 100 }
+                ]
+            },
+            craftEffect: Fx.steam,
+            craftTime: 60,
+        },
+        {
+            consume: {
+                power: 1,
+                items: [
+                    { item: dabaoshiyou, amount: 1 },
+                ]
+            },
+            output: {
+                items: [
+                    { item: xi, amount: 1 },
+                ],
+                liquids: [
+                    { liquid: Liquids.oil, amount: 100 }
+                ]
+            },
+            craftEffect: Fx.steam,
+            craftTime: 60,
+        },
+        {
+            consume: {
+                power: 1,
+                items: [
+                    { item: dabaoleng, amount: 1 },
+                ]
+            },
+            output: {
+                items: [
+                    { item: xi, amount: 1 },
+                ],
+                liquids: [
+                    { liquid: Liquids.cryofluid, amount: 100 }
+                ]
+            },
+            craftEffect: Fx.steam,
+            craftTime: 60,
+        },
+        {
+            consume: {
+                power: 1,
+                items: [
+                    { item: dabaomoli, amount: 1 },
+                ]
+            },
+            output: {
+                items: [
+                    { item: xi, amount: 1 },
+                ],
+                liquids: [
+                    { liquid: moliye, amount: 100 }
+                ]
+            },
+            craftEffect: Fx.steam,
+            craftTime: 60,
+        },
+        {
+            consume: {
+                power: 1.5,
+                items: [
+                    { item: dabaozhiwu, amount: 1 },
+                ]
+            },
+            output: {
+                items: [
+                    { item: xi, amount: 1 },
+                ],
+                liquids: [
+                    { liquid: zhiwujinghuaye, amount: 100 }
+                ]
+            },
+            craftEffect: Fx.steam,
+            craftTime: 60,
+        },
+        {
+            consume: {
+                power: 3,
+                items: [
+                    { item: dabaojingmoli, amount: 1 },
+                ]
+            },
+            output: {
+                items: [
+                    { item: xi, amount: 1 },
+                ],
+                liquids: [
+                    { liquid: molijinghuaye, amount: 100 }
+                ]
+            },
+            craftEffect: Fx.steam,
+            craftTime: 90,
+        },
+        {
+            consume: {
+                power: 5,
+                items: [
+
+                    { item: dabaoyedan, amount: 1 },
+                ]
+            },
+            output: {
+                items: [
+                    { item: xi, amount: 2 },
+                ],
+                liquids: [
+                    { liquid: qiangxiaolengqueye, amount: 100 }
+                ]
+            },
+            craftEffect: Fx.steam,
+            craftTime: 120,
+        },
+    ]
+});
+
+
+
+

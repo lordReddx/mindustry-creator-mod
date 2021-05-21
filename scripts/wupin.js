@@ -273,6 +273,41 @@ exports.qiangxiaolengqueye = (() => {
 
     return myliquid;
 })(); */
+
+exports.dabaoshui = (() => {
+    const v = new Item("dabaoshui", Color.valueOf("529eff"));
+    return v;
+})();//
+exports.dabaoleng = (() => {
+    const v = new Item("dabaoleng", Color.valueOf("1fc9ff"));
+    return v;
+})();//
+exports.dabaoshiyou = (() => {
+    const v = new Item("dabaoshiyou", Color.valueOf("881fff"));
+    return v;
+})();//
+
+exports.dabaomoli = (() => {
+    const v = new Item("dabaomoli", Color.valueOf("881fff"));
+    return v;
+})();//
+
+exports.dabaozhiwu = (() => {
+    const v = new Item("dabaozhiwu", Color.valueOf("73f58a"));
+    return v;
+})();//
+exports.dabaojingmoli = (() => {
+    const v = new Item("dabaojingmoli", Color.valueOf("d296fb"));
+    return v;
+})();//
+exports.dabaoyedan = (() => {
+    const v = new Item("dabaoyedan", Color.valueOf("fefefe"));
+    return v;
+})();//
+
+
+
+
 exports.invalid = (() => {
     var myitem = extendContent(Item, 'invalid', {});
     return myitem;
