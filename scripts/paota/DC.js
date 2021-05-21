@@ -30,7 +30,7 @@ const { createDirectLightning } = require('paota/index');//直流
 const { newIonBoltBulletType } = require('paota/index');//离子液
 const {
     xi, zuanshikuang, zuanjing, hua1, hua2, hua3, tanban,
-    zhiwumo, luzha, weijing1, weijing2, xiao,liziye,
+    zhiwumo, luzha, weijing1, weijing2, xiao, liziye,
     weijing3, weijing4, weijing5, guijingti, molishi,
     monengjing, monengjing1, monengjing2, monengjing3,
     buding, chuangshilizi, chuangshishenhun, chuangshiweichen,
@@ -39,7 +39,7 @@ const {
     molijinghuaye, moliye, qiangxiaolengqueye, zhiwujinghuaye
 } = items;
 //--------------------------------------------------------------------------//
-    var dafengche = (() => {
+var dafengche = (() => {
     const SPEEF = 4;
     const laser01 = new JavaAdapter(ContinuousLaserBulletType, {
     }, 70);
@@ -65,7 +65,7 @@ const {
     laser02.incendChance = 0.4
     laser02.incendSpread = 5
     laser02.incendAmount = 1
-    
+
     const bt = new JavaAdapter(BasicBulletType, {
         init(b) {
             if (!b) { return; }
@@ -112,7 +112,7 @@ const {
         },
     });
     bt.sprite = "duo";
-    bt.reloadMultiplier = 2; 
+    bt.reloadMultiplier = 2;
     bt.damage = 1200;
     bt.width = 6;
     bt.height = 6;
@@ -123,14 +123,14 @@ const {
     bt.backColor = Color.valueOf("ffffff00");
     bt.frontColor = Pal.meltdownHit;
     bt.despawnEffect = Fx.none;
-    bt.speed = 1;
+    bt.speed = 6;
     bt.collides = false;
     bt.reflectable = false;
     bt.absorbable = false;
     bt.homingRange = 480;
     bt.homingPower = 5; //追踪; 
     return bt;
-    })() 
+})()
 //-------------------------------------------------------------------------------------------    
 
 const DianHu = extend(PowerTurret, 'dianhu', {})//电弧
@@ -145,7 +145,7 @@ DianHu.shootType = (() => {
     return a;
 })()
 DianHu.canOverdrive = false;
-DianHu.reloadTime =35;
+DianHu.reloadTime = 35;
 DianHu.shootCone = 40;
 DianHu.rotateSpeed = 500;
 DianHu.powerUse = 20;
@@ -397,7 +397,7 @@ lieguang.size = 3;
 //lieguang.ammoPerShot=2;//每发消耗的资源
 lieguang.targetAir = false; //空
 lieguang.targetGround = true; //地
-lieguang.coolantMultiplier=0.7; //液体冷却倍率
+lieguang.coolantMultiplier = 0.7; //液体冷却倍率
 //lieguang.itemCapacity = 50; //资源容量
 lieguang.reloadTime = 200; //每秒发射数60:1;30:2
 lieguang.range = 216;
@@ -675,16 +675,16 @@ Wweijing2.hitEffect = Fx.plasticExplosion;
 Wweijing2.backColor = Color.valueOf("ffffff"); //背景颜色
 Wweijing2.frontColor = Color.valueOf("bbffbb"); //前面颜色
 Wweijing2.reloadMultiplier = 3.3; //装弹速度
-Wweijing2.ammoMultiplier = 2.5; //装弹数量
+Wweijing2.ammoMultiplier = 4; //装弹数量
 
 var Wweijing1 = new JavaAdapter(BasicBulletType, {});
 Wweijing1.damage = 35; //伤害
 Wweijing1.width = 20; //宽
 Wweijing1.height = 30; //高
 Wweijing1.homingPower = 3; //追踪; 
-Wweijing1.lightning = 3;//闪电根数
-Wweijing1.lightningLength = 6;//闪电长度
-Wweijing1.lightningColor =  Color.valueOf("ff6200");//闪电颜色
+Wweijing1.lightning = 5;//闪电根数
+Wweijing1.lightningLength = 12;//闪电长度
+Wweijing1.lightningColor = Color.valueOf("ff6200");//闪电颜色
 Wweijing1.lightningDamage = 20;//闪电伤害
 Wweijing1.speed = 6;
 Wweijing1.lifetime = 80; //子弹最远距离
@@ -710,7 +710,7 @@ WmonengjingA.hitEffect = Fx.flakExplosion
 //WmonengjingA.collidesTiles = false;
 //WmonengjingA.collidesTeam = false;
 
-var Wmonengjing = new JavaAdapter(MissileBulletType,{});
+var Wmonengjing = new JavaAdapter(MissileBulletType, {});
 Wmonengjing.damage = 53; //伤害
 Wmonengjing.width = 20; //宽
 Wmonengjing.height = 34; //高
@@ -722,7 +722,7 @@ Wmonengjing.hitEffect = Fx.plasticExplosion;
 Wmonengjing.backColor = Color.valueOf("ff6c6c"); //背景颜色
 Wmonengjing.frontColor = Color.valueOf("ffffff"); //前面颜色
 Wmonengjing.reloadMultiplier = 1.3; //装弹速度
-Wmonengjing.ammoMultiplier = 2.5; //装弹数量
+Wmonengjing.ammoMultiplier = 3; //装弹数量
 //Wmonengjing.trailColor= B7B7B7;
 Wmonengjing.trailEffect = Fx.smoke;
 Wmonengjing.shootEffect = Fx.shootSmall;
@@ -730,7 +730,7 @@ Wmonengjing.fragBullets = 25;
 Wmonengjing.fragBullet = WmonengjingA;
 
 
-var Wmonengjing2 = new JavaAdapter(MissileBulletType,{});
+var Wmonengjing2 = new JavaAdapter(MissileBulletType, {});
 Wmonengjing2.damage = 180; //伤害
 Wmonengjing2.width = 20; //宽
 Wmonengjing2.height = 35; //高
@@ -742,7 +742,7 @@ Wmonengjing2.hitEffect = Fx.plasticExplosion;
 Wmonengjing2.backColor = Color.valueOf("b56cff"); //背景颜色
 Wmonengjing2.frontColor = Color.valueOf("ffffff"); //前面颜色
 Wmonengjing2.reloadMultiplier = 0.15; //装弹速度
-Wmonengjing2.ammoMultiplier = 1; //装弹数量
+Wmonengjing2.ammoMultiplier = 5; //装弹数量
 //Wmonengjing2.trailColor= B7B7B7;
 Wmonengjing2.trailEffect = Fx.smoke;
 Wmonengjing2.shootEffect = Fx.shootSmall;
@@ -813,7 +813,7 @@ bawang.size = 4;
 //bawang.ammoPerShot=2;//每发消耗的资源
 bawang.targetAir = true; //空
 bawang.targetGround = true; //地
- bawang.coolantMultiplier=0.3; //液体冷却倍率
+bawang.coolantMultiplier = 0.3; //液体冷却倍率
 bawang.itemCapacity = 50; //资源容量
 bawang.reloadTime = 30; //每秒发射数60:1;30:2
 bawang.range = 480;
@@ -835,49 +835,26 @@ exports.bawang = bawang;
 
 Blocks.tsunami.ammoTypes.put(liziye, (() => {
     const v = newIonBoltBulletType(liziye);
-    v.speed= 4;
+    v.speed = 4;
     v.damage = 6.32;
     return v;
 })());
 
-  Blocks.tsunami.ammoTypes.put(qiangxiaolengqueye, (() => {
+Blocks.tsunami.ammoTypes.put(qiangxiaolengqueye, (() => {
     const v = new LiquidBulletType(qiangxiaolengqueye);
-    v.speed= 6;
+    v.speed = 6;
     v.damage = 0.2;
     //v.status = StatusEffects.unmoving; //效果:定身
     //v.statusDuration = 30
     return v;
-})());  
+})());
 
 
 
 
 const ronghui3 = new JavaAdapter(LaserTurret, {
 }, 'ronghui3');
-
-const turrett = new JavaAdapter(LaserTurret, {
-}, 'ronghui2');
-
-turrett.cooldown = 0.04;
-turrett.recoilAmount = 1.5;
-turrett.liquidCapacity = 10;
-turrett.buildVisibility = BuildVisibility.shown;
-turrett.category = Category.turret;
-turrett.health = 1800;
-turrett.size = 3;
-turrett.reloadTime = 30 - 1;
-turrett.range = 320;
-turrett.rotateSpeed = 15;
-turrett.inaccuracy = 2;
-turrett.shots = 1;
-turrett.burstSpacing = 0;
-turrett.xRand = 0;
-turrett.requirements = ItemStack.with(
-    Items.copper, 200,
-    Items.silicon, 130,
-    Items.thorium, 110,
-);
-turrett.shootType = (() => {
+var aassaas = (() => {
     const SPEED = 4;
 
     const laser1 = new JavaAdapter(ContinuousLaserBulletType, {
@@ -952,7 +929,8 @@ turrett.shootType = (() => {
         },
     });
     bt.sprite = "duo";
-    bt.reloadMultiplier = 2; 
+    bt.reloadMultiplier = 1
+    bt.ammoMultiplier=1;
     bt.damage = 1400;
     bt.width = 6;
     bt.height = 6;
@@ -969,8 +947,44 @@ turrett.shootType = (() => {
     bt.absorbable = false;
     return bt;
 })()
+var ffffffaa = new JavaAdapter(LaserBulletType, {}, 70);
+ffffffaa.hitEffect = Fx.hitLancer;
+ffffffaa.despawnEffect = Fx.none;
+ffffffaa.hitSize = 4;
+ffffffaa.lifetime = 16;
+ffffffaa.drawSize = 400;
+ffffffaa.collidesAir = false;
+ffffffaa.length = 173;
+ffffffaa.fragBullet = aassaas;
+ffffffaa.length = 1;
+ffffffaa.width = 1;
 
-const youling2 = new JavaAdapter(LaserTurret, {
+const turrett = new JavaAdapter(PowerTurret, {
+}, 'ronghui2');
+
+turrett.cooldown = 0.04;
+turrett.recoilAmount = 1.5;
+turrett.liquidCapacity = 10;
+turrett.buildVisibility = BuildVisibility.shown;
+turrett.category = Category.turret;
+turrett.health = 1800;
+turrett.size = 3;
+turrett.range = 320;
+turrett.rotateSpeed = 15;
+turrett.inaccuracy = 2;
+turrett.shots = 1;
+turrett.burstSpacing = 0;
+turrett.xRand = 0;
+turrett.requirements = ItemStack.with(
+    Items.copper, 200,
+    Items.silicon, 130,
+    Items.thorium, 110,
+);
+turrett.shootType = aassaas
+
+
+
+const youling2 = new JavaAdapter(PowerTurret, {
 }, 'youling2');
 
 const ronghui4 = new JavaAdapter(LaserTurret, {
@@ -1144,15 +1158,15 @@ lib.setBuildingSimple(turret, Turret.TurretBuild, {
 });
 turret.coolantUsage = 0;//液体加速
 turret.buildVisibility = BuildVisibility.sandboxOnly,
-turret.targetInterval = 0;
+    turret.targetInterval = 0;
 turret.category = Category.turret;
-turret.health= 6000;
-turret.size= 1;
-turret.reloadTime= 10;
-turret.range= 400;
-turret.inaccuracy= 15;
-turret.rotateSpeed= 20;
-turret.targetInterval= 0;
-turret.shootCone= 80;
-turret.shootSound= Sounds.shootBig;
+turret.health = 6000;
+turret.size = 1;
+turret.reloadTime = 10;
+turret.range = 400;
+turret.inaccuracy = 15;
+turret.rotateSpeed = 20;
+turret.targetInterval = 0;
+turret.shootCone = 80;
+turret.shootSound = Sounds.shootBig;
 exports.turret = turret;
